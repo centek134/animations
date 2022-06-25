@@ -1,5 +1,69 @@
 .home_page {
-  min-height: 100%;
+  min-height: 100vh;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #5c5252;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+.home_page h1 {
+  font-size: 55px;
+}
+.home_page h1:before {
+  -webkit-animation-name: write-animation;
+          animation-name: write-animation;
+}
+.home_page h2 {
+  font-size: 50px;
+}
+.home_page h2:before {
+  -webkit-animation-name: write-animation-delay;
+          animation-name: write-animation-delay;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.home_page h1, .home_page h2 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  color: #1d9099;
+  letter-spacing: 5px;
+  text-shadow: 3px 3px 0 #e79c10, 6px 6px 0 #d53a33;
+  font-family: "Sarpanch", sans-serif;
+}
+.home_page h1:before, .home_page h2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #5c5252;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes write-animation {
+  100% {
+    left: 100%;
+  }
+}
+@keyframes write-animation {
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes write-animation-delay {
+  100% {
+    left: 100%;
+  }
+}
+@keyframes write-animation-delay {
+  100% {
+    left: 100%;
+  }
 }
