@@ -3,4 +3,25 @@
     min-width: 250px;
     background-color: #353030;
     color: #ffffff;
+    .logo{
+        width: 100%;
+        svg{
+            width: 100%;
+            height: 80px;
+            #rectangle, #polygon{
+                stroke: #ffffff;
+            }
+            #animations{
+                fill: #ffffff;
+            }
+            #polygon{
+                stroke-dasharray: 250;
+                stroke-dashoffset: 250;
+            }
+            #square{
+                stroke-dasharray: 250;
+                stroke-dashoffset: 250;
+            }
+        }
+    }
 } 
