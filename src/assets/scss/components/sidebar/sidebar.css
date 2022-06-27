@@ -16,12 +16,65 @@
 }
 .side-nav .logo svg #animations {
   fill: #ffffff;
+  opacity: 0;
+  -webkit-animation-name: logo_animations;
+          animation-name: logo_animations;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .side-nav .logo svg #polygon {
   stroke-dasharray: 250;
   stroke-dashoffset: 250;
+  stroke: #f5a937;
+  -webkit-animation-name: logo_polygon;
+          animation-name: logo_polygon;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .side-nav .logo svg #square {
   stroke-dasharray: 250;
   stroke-dashoffset: 250;
+  stroke: #ff0000;
+  -webkit-animation-name: logo_square;
+          animation-name: logo_square;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes logo_polygon {
+  100% {
+    stroke-dasharray: 250;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes logo_polygon {
+  100% {
+    stroke-dasharray: 250;
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes logo_square {
+  100% {
+    stroke-dasharray: 120;
+  }
+}
+@keyframes logo_square {
+  100% {
+    stroke-dasharray: 120;
+  }
+}
+@-webkit-keyframes logo_animations {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes logo_animations {
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=sidebar.css.map */
