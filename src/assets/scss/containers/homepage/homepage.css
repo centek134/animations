@@ -25,13 +25,12 @@
           animation-delay: 3s;
 }
 .home_page h1, .home_page h2 {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: 100%;
   position: relative;
   color: #1d9099;
   letter-spacing: 5px;
   text-shadow: 3px 3px 0 #e79c10, 6px 6px 0 #d53a33;
+  text-align: center;
   font-family: "Sarpanch", sans-serif;
 }
 .home_page h1:before, .home_page h2:before {
