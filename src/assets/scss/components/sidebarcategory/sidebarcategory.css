@@ -1,0 +1,10 @@
+.sidebar_list {
+  width: 100%;
+  padding: 15px 10px 0px 10px;
+}
+.sidebar_list .category {
+  padding: 10px 0;
+}
+.sidebar_list .category .category_text_icon {
+  color: #fff;
+}/*# sourceMappingURL=sidebarcategory.css.map */
