@@ -1,6 +1,9 @@
 import React from 'react'
 import "../../assets/scss/components/sidebar/sidebar.css";
+import SidebarCategory from '../SidebarCategory/SidebarCategory';
+import {Link} from "react-router-dom";
 const Sidebar = (props) => {
+  const animations_list = [{name: "Menu Animated", url:"menu-animated"}];
   return (
     <nav className="side-nav">
       <header className="logo">
@@ -12,6 +15,10 @@ const Sidebar = (props) => {
             </g>
           </svg>
       </header>
+      <div className='sidebar_list'>
+        <Link to={"/"}>Home Page</Link>
+        <SidebarCategory list = {animations_list} category_text="3D Animations"/>
+      </div>
     </nav>
   );
 };
