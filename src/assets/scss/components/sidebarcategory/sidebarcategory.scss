@@ -1,10 +1,44 @@
 .sidebar_list{
     width: 100%;
-    padding: 15px 10px 0px 10px;
+    padding: 15px 30px 0px 30px;
     .category{
         padding: 10px 0;
-        .category_text_icon{
-            color: #fff;
+        .category_text{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            .category_text_arrow{
+                margin: 0 0 0 5px;
+                position: relative;
+                &:before, &:after{
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 2px;
+                    top: 0;
+                    background-color: #ffffff;
+                    transition: 0.5s;
+                }
+                &:before{
+                    left: 3px;
+                    transform: rotate(-45deg);
+                }
+                &::after{
+                    left: 8.5px;
+                    transform: rotate(45deg);
+                }
+            }
+            .category_text_arrow.show{
+                &:before{
+                    left: 3px;
+                    transform: rotate(45deg);
+                }
+                &::after{
+                    left: 8.5px;
+                    transform: rotate(-45deg);
+                }
+            }
+
         }
     }
 }
