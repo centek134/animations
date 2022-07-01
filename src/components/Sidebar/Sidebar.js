@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import "../../assets/scss/components/sidebar/sidebar.css";
 import SidebarCategory from '../SidebarCategory/SidebarCategory';
 import {Link} from "react-router-dom";
@@ -15,8 +15,8 @@ const Sidebar = (props) => {
             </g>
           </svg>
       </header>
-      <div className='sidebar_list'>
-        <Link to={"/"}>Home Page</Link>
+      <div className="sidebar_list">
+        <Link className="home_page_link" to={"/"}>Home Page</Link>
         <SidebarCategory list = {animations_list} category_text="3D Animations"/>
       </div>
     </nav>
