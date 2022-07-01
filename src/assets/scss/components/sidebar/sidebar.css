@@ -46,6 +46,12 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
+.side-nav .sidebar_list .home_page_link {
+  width: 100%;
+  font-size: 30px;
+  text-decoration: none;
+  color: #ffffff;
+}
 @-webkit-keyframes logo_polygon {
   100% {
     stroke-dasharray: 250;
