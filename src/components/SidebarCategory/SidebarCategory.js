@@ -8,13 +8,13 @@ const SidebarCategory = (props) => {
   return (
       <div className="category">
         <h3 onClick={() => {setHideList(!hideList);}} className="category_text">{props.category_text}<div className={hideList? "category_text_arrow" : "category_text_arrow show"}></div></h3>
-        <div id="list" className="category_list">
+        <ul className="category_list">
           {hideList? null
           :
           list.map((item,i) => {
-            return <Link key={i} className='list_item' to={item.url}>{item.name}</Link>
+            return <li className='list_item' key={i}><Link className='list_item_link' to={item.url}>{item.name}</Link></li>
           })}
-        </div>
+        </ul>
       </div>
   )
 }
