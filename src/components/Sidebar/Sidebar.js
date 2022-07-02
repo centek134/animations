@@ -3,7 +3,7 @@ import "../../assets/scss/components/sidebar/sidebar.css";
 import SidebarCategory from '../SidebarCategory/SidebarCategory';
 import {Link} from "react-router-dom";
 const Sidebar = (props) => {
-  const animations_list = [{name: "Menu Animated", url:"menu-animated"}];
+  const animations_list = [{name: "Menu Animated", url:"menu-animated"},{name:"Cube", url:"cube"}];
   return (
     <nav className="side-nav">
       <header className="logo">
