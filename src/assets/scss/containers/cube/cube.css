@@ -1,0 +1,45 @@
+.wrapper_cube {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+}
+.wrapper_cube .cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: rotateX(24deg) rotateY(32deg);
+}
+.wrapper_cube .cube .wall {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.116);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+}
+.wrapper_cube .cube .wall.front {
+  transform: translate3d(0, 0, -100px);
+}
+.wrapper_cube .cube .wall.back {
+  transform: translate3d(0, 0, 100px);
+}
+.wrapper_cube .cube .wall.left {
+  transform: rotateY(90deg) translate3d(0, 0, -100px);
+}
+.wrapper_cube .cube .wall.right {
+  transform: rotateY(-90deg) translate3d(0, 0, -100px);
+}
+.wrapper_cube .cube .wall.top {
+  transform-origin: top;
+  transform: rotateX(90deg) translateY(-100px);
+}
+.wrapper_cube .cube .wall.bottom {
+  transform-origin: bottom;
+  transform: rotateX(90deg) translateY(100px);
+}/*# sourceMappingURL=cube.css.map */
