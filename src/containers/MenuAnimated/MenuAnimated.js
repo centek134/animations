@@ -5,7 +5,7 @@ const MenuAnimated = () => {
     const url = "#";
 
   return (
-    <section className="wrapper">
+    <section className="wrapper_menuanimated">
       <ul>
         <li style={{ "--i":6}}>
           <a href={url}>Home</a>
