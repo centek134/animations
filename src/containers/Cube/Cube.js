@@ -3,16 +3,19 @@ import "../../assets/scss/containers/cube/cube.css";
 const Cube = () => {
   return (
     <section className="wrapper_cube">
-        <div className="cube">
-            <div className="wall front">1</div>
-            <div className="wall back">2</div>
-            <div className="wall left">3</div>
-            <div className="wall right">4</div>
-            <div className="wall top">5</div>
-            <div className="wall bottom">6</div>
-        </div>
-        <div className="floor">
-        </div>
+      <div className="scene">
+          <div className="cube">
+              <div className="wall front">( ͡° ͜ʖ ͡°)</div>
+              <div className="wall back">༼つ ◕_◕ ༽つ</div>
+              <div className="wall left">(⌐▀͡ ̯ʖ▀)=/̵͇̿̿/'̿'̿̿̿ ̿ ̿̿</div>
+              <div className="wall right">(=｀ω´=)</div>
+              <div className="wall top">(╯ ͠° ͟ʖ ͡°)╯┻━┻</div>
+              <div className="wall bottom">👌</div>
+          </div>
+          <div className="floor">
+            <div className="cube_shadow"></div>
+          </div>
+      </div>
     </section>
   );
 };
