@@ -5,6 +5,7 @@ $white_color:#ffffff;
     min-width: 250px;
     background-color: $sidebar_background;
     color: $white_color;
+    flex: 0.2;
     .logo{
         width: 100%;
         svg{
@@ -37,6 +38,9 @@ $white_color:#ffffff;
                 animation-fill-mode: forwards;
             }
         }
+    }
+    @media screen and (max-width:700px){
+        display: none;
     }
 
     .sidebar_list .home_page_link{
