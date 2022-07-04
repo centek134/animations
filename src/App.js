@@ -9,11 +9,14 @@ const App = () => {
   return (
     <div className="App">
       <Sidebar />
+      <div className="content_wrapper">
+      <div className="mobile_menu_icon"></div>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/menu-animated' element={<MenuAnimated/>}/>
         <Route path='/cube' element={<Cube/>}/>
       </Routes>
+      </div>
     </div>
   );
 }
