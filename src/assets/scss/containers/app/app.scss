@@ -12,9 +12,9 @@
     .content_wrapper{
         width: 100%;
         min-height: 100vh;
-        flex: 0.8;
         position: relative;
         .mobile_menu_icon{
+            box-sizing: initial;
             display: none;
             position: fixed;
             top: 30px;
@@ -22,6 +22,7 @@
             width: 30px;
             height: 5px;
             background-color: #fff;
+            border: 1px solid #000;
             &:before{
                 position: fixed;
                 content: "";
@@ -30,6 +31,7 @@
                 width: 30px;
                 height: 5px;
                 background-color: #fff;
+                border: 1px solid #000;
             }
             &:after{
                 position: fixed;
@@ -39,13 +41,16 @@
                 width: 30px;
                 height: 5px;
                 background-color: #fff;
+                border: 1px solid #000;
             }
             @media screen and (max-width:700px){
                 display: block;
             }
         }
+    }
+    .content_wrapper.hide{
         @media screen and (max-width:700px){
-            flex: 1;
+            display: none;
         }
     }
 

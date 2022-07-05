@@ -5,7 +5,43 @@ $white_color:#ffffff;
     min-width: 250px;
     background-color: $sidebar_background;
     color: $white_color;
-    flex: 0.2;
+    .mobile_menu_icon{
+            display: none;
+            box-sizing: initial;
+            display: none;
+            position: fixed;
+            top: 30px;
+            left: 15px;
+            width: 30px;
+            height: 5px;
+            background-color: red;
+            border: 1px solid #000;
+            &:before{
+                position: fixed;
+                content: "";
+                top: 20px;
+                left: 15px;
+                width: 30px;
+                height: 5px;
+                background-color: red;
+                border: 1px solid #000;
+            }
+            &:after{
+                position: fixed;
+                content: "";
+                top: 10px;
+                left: 15px;
+                width: 30px;
+                height: 5px;
+                background-color: red;
+                border: 1px solid #000;
+            }
+    }
+    .mobile_menu_icon.show{
+        @media screen and (max-width:700px){
+            display: block;
+        }
+    }
     .logo{
         width: 100%;
         svg{
@@ -42,7 +78,6 @@ $white_color:#ffffff;
     @media screen and (max-width:700px){
         display: none;
     }
-
     .sidebar_list .home_page_link{
         width: 100%;
         font-size: 30px;
@@ -65,5 +100,12 @@ $white_color:#ffffff;
         100%{
             opacity: 1;
         }
+    }
+    
+}
+.side-nav.open{
+    @media screen and (max-width:700px){
+        display: block;
+        width: 100%;
     }
 } 
