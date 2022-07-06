@@ -11,9 +11,11 @@ const [showSidebar, setShowSidebar] = useState(false);
 
   return (
     <div className="App">
-      <Sidebar setShow = {setShowSidebar} show={showSidebar} />
+      <div onClick={() => setShowSidebar(!showSidebar)} className="wrapper_mobile_menu_btn">
+        <div className="mobile_menu_icon"></div>
+      </div>
+      <Sidebar show={showSidebar} />
       <div className={showSidebar?"content_wrapper hide":"content_wrapper"}>
-      <div onClick={() => setShowSidebar(!showSidebar)} className="mobile_menu_icon"></div>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/menu-animated' element={<MenuAnimated/>}/>

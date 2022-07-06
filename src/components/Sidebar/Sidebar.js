@@ -6,7 +6,6 @@ const Sidebar = (props) => {
   const animations_list = [{name: "Menu Animated", url:"menu-animated"},{name:"Cube", url:"cube"}];
   return (
     <nav className={props.show?"side-nav open":"side-nav"}>
-      <div onClick={() => props.setShow(!props.show)} className={props.show?"mobile_menu_icon show":"mobile_menu_icon"}></div>
       <header className="logo">
           <svg viewBox="0 0 162 64" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g>
