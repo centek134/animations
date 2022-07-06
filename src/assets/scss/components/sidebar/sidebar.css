@@ -4,43 +4,6 @@
   background-color: #353030;
   color: #ffffff;
 }
-.side-nav .mobile_menu_icon {
-  display: none;
-  box-sizing: initial;
-  display: none;
-  position: fixed;
-  top: 30px;
-  left: 15px;
-  width: 30px;
-  height: 5px;
-  background-color: red;
-  border: 1px solid #000;
-}
-.side-nav .mobile_menu_icon:before {
-  position: fixed;
-  content: "";
-  top: 20px;
-  left: 15px;
-  width: 30px;
-  height: 5px;
-  background-color: red;
-  border: 1px solid #000;
-}
-.side-nav .mobile_menu_icon:after {
-  position: fixed;
-  content: "";
-  top: 10px;
-  left: 15px;
-  width: 30px;
-  height: 5px;
-  background-color: red;
-  border: 1px solid #000;
-}
-@media screen and (max-width: 700px) {
-  .side-nav .mobile_menu_icon.show {
-    display: block;
-  }
-}
 .side-nav .logo {
   width: 100%;
 }
