@@ -10,17 +10,25 @@
         list-style-type: none;
         width: 300px;
         transform: skewY(-15deg);
+        @media screen and (max-width:500px) {
+            width: 150px;
+            transform: translateX(50px) skewY(-15deg);
+        }
         li{
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 300px;
+            width: 100%;
             height: 80px;
             background-color:#1499C5;
             font-size: 26px;
             z-index: var(--i);
             transition: 0.8s;
+            @media screen and (max-width:500px) {
+                font-size: 14px;
+                height: 40px;
+            }
             a{
                 text-decoration: none;
                 text-transform: uppercase;
