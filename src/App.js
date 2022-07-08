@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar/Sidebar.js';
 import MenuAnimated from './containers/MenuAnimated/MenuAnimated';
 import HomePage from './containers/HomePage/HomePage.js';
 import Cube from './containers/Cube/Cube';
+import Circles from "./containers/Circles/Circles";
 
 const App = () => {
 const [showSidebar, setShowSidebar] = useState(false);
@@ -20,6 +21,7 @@ const [showSidebar, setShowSidebar] = useState(false);
         <Route path='/' element={<HomePage/>}/>
         <Route path='/menu-animated' element={<MenuAnimated/>}/>
         <Route path='/cube' element={<Cube/>}/>
+        <Route path='/circles' element={<Circles/>}/>
       </Routes>
       </div>
     </div>
