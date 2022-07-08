@@ -1,0 +1,87 @@
+.wrapper_circles {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper_circles .scene {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg);
+}
+.wrapper_circles .scene .circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  box-shadow: 0 10px rgb(177, 170, 170), 0 10px rgb(177, 170, 170);
+  -webkit-animation: moving-circle 3s ease-in-out infinite;
+          animation: moving-circle 3s ease-in-out infinite;
+}
+.wrapper_circles .scene .circle:nth-last-of-type(1) {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.wrapper_circles .scene .circle:nth-last-of-type(2) {
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.wrapper_circles .scene .circle:nth-last-of-type(3) {
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.wrapper_circles .scene .circle:nth-last-of-type(4) {
+  top: 150px;
+  left: 150px;
+  right: 150px;
+  bottom: 150px;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.wrapper_circles .scene .circle:nth-last-of-type(5) {
+  top: 200px;
+  left: 200px;
+  right: 200px;
+  bottom: 200px;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.wrapper_circles .scene .circle:nth-last-of-type(6) {
+  top: 250px;
+  left: 250px;
+  right: 250px;
+  bottom: 250px;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+@-webkit-keyframes moving-circle {
+  0%, 100% {
+    transform: translateZ(-100px);
+  }
+  50% {
+    transform: translateZ(100px);
+  }
+}
+@keyframes moving-circle {
+  0%, 100% {
+    transform: translateZ(-100px);
+  }
+  50% {
+    transform: translateZ(100px);
+  }
+}/*# sourceMappingURL=circles.css.map */

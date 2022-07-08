@@ -1,0 +1,80 @@
+$scene_width:600px;
+$scene_height:600px;
+$circle_translateZ:100px;
+$sizes: 550, 500, 450, 400, 350, 300, 250, 200, 150, 100, 50;
+.wrapper_circles{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .scene{
+        position: relative;
+        width: $scene_width;
+        height: $scene_height;
+        transform-style: preserve-3d;
+        transform: rotateX(60deg);
+        .circle{
+            position: absolute;
+            border-radius: 50%;
+            border: 10px solid #fff;
+            box-shadow: 0 10px rgb(177, 170, 170), 0 10px rgb(177, 170, 170);
+            animation: moving-circle 3s ease-in-out infinite ;
+        }
+        .circle:nth-last-of-type(1){
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            animation-delay: 0.2s;
+        }
+        .circle:nth-last-of-type(2){
+            top: 50px;
+            left: 50px;
+            right: 50px;
+            bottom: 50px;
+            animation-delay: 0.3s;
+        }
+        .circle:nth-last-of-type(3){
+            top: 100px;
+            left: 100px;
+            right: 100px;
+            bottom: 100px;
+            animation-delay: 0.4s;
+        }
+        .circle:nth-last-of-type(4){
+            top: 150px;
+            left: 150px;
+            right: 150px;
+            bottom: 150px;
+            animation-delay: 0.5s;
+        }
+        .circle:nth-last-of-type(5){
+            top: 200px;
+            left: 200px;
+            right: 200px;
+            bottom: 200px;
+            animation-delay: 0.6s;
+        }
+        .circle:nth-last-of-type(6){
+            top: 250px;
+            left: 250px;
+            right: 250px;
+            bottom: 250px;
+            animation-delay: 0.7s;
+        }
+    }
+
+
+
+    @keyframes moving-circle {
+        0%,100%{
+            transform: translateZ(-$circle_translateZ);
+        }
+        50%{
+            transform: translateZ($circle_translateZ);
+        }
+        
+    }
+}
