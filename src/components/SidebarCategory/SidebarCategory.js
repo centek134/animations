@@ -1,6 +1,6 @@
 import {React, useState} from 'react';
 import {Link} from "react-router-dom";
-import "../../assets/scss/components/sidebarcategory/sidebarcategory.css";
+import "../../assets/scss/components/SidebarCategory/SidebarCategory.css";
 const SidebarCategory = (props) => {
   const [hideList, setHideList] = useState(true);
   const list = props.list;

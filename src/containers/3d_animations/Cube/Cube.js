@@ -1,5 +1,5 @@
 import React from "react";
-import "../../assets/scss/containers/cube/cube.css";
+import "../../../assets/scss/containers/3d_animations/Cube/Cube.css";
 const Cube = () => {
   return (
     <section className="wrapper_cube">

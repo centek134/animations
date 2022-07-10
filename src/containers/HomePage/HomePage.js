@@ -1,6 +1,5 @@
 import React from "react";
-import "../../assets/scss/containers/menuanimated/menuanimated.css";
-import "../../assets/scss/containers/homepage/homepage.css";
+import "../../assets/scss/containers/HomePage/HomePage.css";
 const HomePage = () => {
   return (
     <section className="home_page">

@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../assets/scss/containers/circles/circles.css";
+import "../../../assets/scss/containers/3d_animations/Circles/Circles.css";
 const Circles = () => {
   return (
     <section className="wrapper_circles">

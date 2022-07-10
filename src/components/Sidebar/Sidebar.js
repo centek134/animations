@@ -1,9 +1,9 @@
 import React from "react";
-import "../../assets/scss/components/sidebar/sidebar.css";
+import "../../assets/scss/components/Sidebar/Sidebar.css";
 import SidebarCategory from '../SidebarCategory/SidebarCategory';
 import {Link} from "react-router-dom";
 const Sidebar = (props) => {
-  const animations_list = [{name: "Menu Animated", url:"menu-animated"},{name:"Cube", url:"cube"}, {name:"Circles", url:"circles"}];
+  const animations_list = [{name: "Menu Animated", url:"3d-animations/menu-animated"},{name:"Cube", url:"3d-animations/cube"}, {name:"Circles", url:"3d-animations/circles"}, {name:"Book", url:"3d-animations/book"}];
   return (
     <nav className={props.show?"side-nav open":"side-nav"}>
       <header className="logo">

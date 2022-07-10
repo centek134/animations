@@ -1,5 +1,7 @@
 /* eslint-disable react/style-prop-object */
 import React from "react";
+import "../../../assets/scss/containers/3d_animations/MenuAnimated/MenuAnimated.css";
+
 
 const MenuAnimated = () => {
     const url = "#";
