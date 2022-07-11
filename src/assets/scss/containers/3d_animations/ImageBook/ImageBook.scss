@@ -1,0 +1,75 @@
+$book_width:700px;
+$book_height:500px;
+.wrapper_book{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .book{
+        box-shadow: 0 0 20px 0 #000;
+        width: $book_width;
+        height: $book_height;
+        background-color: #000;
+        transform-style: preserve-3d;
+        .inpt{
+            position: relative;
+            width: $book_width;
+            height: $book_height;
+            outline: none;
+            appearance: none;
+            cursor: pointer;
+            &:checked ~ .page.p_1::before{
+                transform: rotateY(180deg);
+            }
+            &:checked ~ .page.p_2::before{
+                transform: rotateY(360deg);
+            }
+        }
+        .page{
+            position: absolute;
+            top: 0;
+            width: calc($book_width/2);
+            height: $book_height;
+            pointer-events: none;
+            transform-style: preserve-3d;
+            transition: 2s;
+        }
+        .page.p_1{
+            left: 0;
+            background-image: url("../../../../../assets/img/ImageBook/grumpy_cat.png");
+            transition: 2s;
+            &:before{
+                transition: 2s;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: $book_height;
+                transform-origin: right;
+                backface-visibility: hidden;
+                background-image: url("../../../../../assets/img/ImageBook/pug.png");
+            }
+        }
+        .page.p_2{
+            right: 0;
+            transition: 2s;
+            background-image: url("../../../../../assets/img/ImageBook/pug.png");
+            background-position-x:calc($book_width/2);
+            &:before{
+                transition: 2s;
+                position: absolute;
+                content: "";
+                right: 0;
+                width: 100%;
+                height: $book_height;
+                transform-origin: left;
+                background-position-x:calc($book_width/2);
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
+                background-image: url("../../../../../assets/img/ImageBook/grumpy_cat.png");
+            }
+        }
+    }
+}
