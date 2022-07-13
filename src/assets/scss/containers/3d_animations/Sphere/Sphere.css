@@ -1,0 +1,56 @@
+.wrapper_sphere {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(123, 255, 148);
+  background: linear-gradient(45deg, rgb(123, 255, 148) 0%, rgb(106, 80, 255) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+.wrapper_sphere .sphere {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  transform-style: preserve-3d;
+}
+.wrapper_sphere .sphere .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px #fff dashed;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+}
+.wrapper_sphere .sphere .circle.c_2 {
+  transform: rotateY(18deg);
+}
+.wrapper_sphere .sphere .circle.c_3 {
+  transform: rotateY(36deg);
+}
+.wrapper_sphere .sphere .circle.c_4 {
+  transform: rotateY(54deg);
+}
+.wrapper_sphere .sphere .circle.c_5 {
+  transform: rotateY(72deg);
+}
+.wrapper_sphere .sphere .circle.c_6 {
+  transform: rotateY(90deg);
+}
+.wrapper_sphere .sphere .circle.c_7 {
+  transform: rotateY(108deg);
+}
+.wrapper_sphere .sphere .circle.c_8 {
+  transform: rotateY(126deg);
+}
+.wrapper_sphere .sphere .circle.c_9 {
+  transform: rotateY(144deg);
+}
+.wrapper_sphere .sphere .circle.c_9 {
+  transform: rotateY(162deg);
+}
+.wrapper_sphere .sphere .circle.c_10 {
+  transform: rotateY(180deg);
+}/*# sourceMappingURL=Sphere.css.map */
