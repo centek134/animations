@@ -7,6 +7,7 @@ import HomePage from "./containers/HomePage/HomePage.js";
 import Cube from "./containers/3d_animations/Cube/Cube";
 import Circles from "./containers/3d_animations/Circles/Circles";
 import ImageBook from "./containers/3d_animations/ImageBook/ImageBook";
+import Sphere from "./containers/3d_animations/Sphere/Sphere";
 
 const App = () => {
 const [showSidebar, setShowSidebar] = useState(false);
@@ -24,6 +25,7 @@ const [showSidebar, setShowSidebar] = useState(false);
         <Route path="/3d-animations/cube" element={<Cube/>}/>
         <Route path="/3d-animations/circles" element={<Circles/>}/>
         <Route path="/3d-animations/book" element={<ImageBook/>}/>
+        <Route path="/3d-animations/sphere" element={<Sphere/>}/>
       </Routes>
       </div>
     </div>
