@@ -3,7 +3,8 @@ import "../../assets/scss/components/Sidebar/Sidebar.css";
 import SidebarCategory from '../SidebarCategory/SidebarCategory';
 import {Link} from "react-router-dom";
 const Sidebar = (props) => {
-  const animations_list = [{name: "Menu Animated", url:"3d-animations/menu-animated"},{name:"Cube", url:"3d-animations/cube"}, {name:"Circles", url:"3d-animations/circles"}, {name:"ImageBook", url:"3d-animations/book"}, {name:"Sphere", url:"3d-animations/sphere"}];
+  const animations_list_3d = [{name: "Menu Animated", url:"3d-animations/menu-animated"},{name:"Cube", url:"3d-animations/cube"}, {name:"Circles", url:"3d-animations/circles"}, {name:"ImageBook", url:"3d-animations/book"}, {name:"Sphere", url:"3d-animations/sphere"}];
+  const animations_list_2d =[{name:"Partial photo", url:"2d-animations/partial-photo"}]
   return (
     <nav className={props.show?"side-nav open":"side-nav"}>
       <header className="logo">
@@ -17,7 +18,8 @@ const Sidebar = (props) => {
       </header>
       <div className="sidebar_list">
         <Link className="home_page_link" to={"/"}>Home Page</Link>
-        <SidebarCategory list = {animations_list} category_text="3D Animations"/>
+        <SidebarCategory list = {animations_list_3d} category_text="3D Animations"/>
+        <SidebarCategory list = {animations_list_2d} category_text="2D Animations"/>
       </div>
     </nav>
   );
