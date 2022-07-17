@@ -16,6 +16,18 @@
   -webkit-animation: rotate ease-in-out 20s infinite;
           animation: rotate ease-in-out 20s infinite;
 }
+@media screen and (max-width: 900px) {
+  .wrapper_sphere .sphere {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .wrapper_sphere .sphere {
+    width: 250px;
+    height: 250px;
+  }
+}
 .wrapper_sphere .sphere .circle {
   transform-style: preserve-3d;
   position: absolute;
