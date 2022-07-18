@@ -13,6 +13,7 @@ import Sphere from "./containers/3d_animations/Sphere/Sphere";
 
 //=============== 2D animations imports ===============
 import PartialPhoto from "./containers/2d_animations/PartialPhoto/PartialPhoto";
+import HideAndSeek from "./containers/2d_animations/HideAndSeek/HideAndSeek";
 
 const App = () => {
 const [showSidebar, setShowSidebar] = useState(false);
@@ -26,12 +27,15 @@ const [showSidebar, setShowSidebar] = useState(false);
       <div className={showSidebar?"content_wrapper hide":"content_wrapper"}>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
+        {/*3d animations routes */}
         <Route path="/3d-animations/menu-animated" element={<MenuAnimated/>}/>
         <Route path="/3d-animations/cube" element={<Cube/>}/>
         <Route path="/3d-animations/circles" element={<Circles/>}/>
         <Route path="/3d-animations/book" element={<ImageBook/>}/>
         <Route path="/3d-animations/sphere" element={<Sphere/>}/>
+        {/*2d animations routes */}
         <Route path="/2d-animations/partial-photo" element={<PartialPhoto/>}/>
+        <Route path="/2d-animations/hide-and-seek" element={<HideAndSeek/>}/>
       </Routes>
       </div>
     </div>
