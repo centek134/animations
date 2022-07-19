@@ -1,10 +1,16 @@
-import React from "react"
-
+import React from "react";
+import "../../../assets/scss/containers/2d_animations/HideAndSeek/HideAndSeek.css";
 
 const HideAndSeek = () => {
   return (
-    <div className="wrapper_hide_and_seek">HideAndSeek</div>
-  )
-}
+    <div className="wrapper_hide_and_seek">
+      <div className="scene">
+        <div className="glass_wall"></div>
+        <div className="doge"></div>
+        <div className="pepe"></div>
+      </div>
+    </div>
+  );
+};
 
 export default HideAndSeek;
