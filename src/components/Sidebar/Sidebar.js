@@ -3,7 +3,7 @@ import "../../assets/scss/components/Sidebar/Sidebar.css";
 import SidebarCategory from '../SidebarCategory/SidebarCategory';
 import {Link} from "react-router-dom";
 const Sidebar = (props) => {
-  const animations_list_3d = [{name: "Menu Animated", url:"3d-animations/menu-animated"},{name:"Cube", url:"3d-animations/cube"}, {name:"Circles", url:"3d-animations/circles"}, {name:"ImageBook", url:"3d-animations/book"}, {name:"Sphere", url:"3d-animations/sphere"}];
+  const animations_list_3d = [{name: "Menu Animated", url:"3d-animations/menu-animated"},{name:"Cube", url:"3d-animations/cube"}, {name:"Circles", url:"3d-animations/circles"}, {name:"ImageBook", url:"3d-animations/book"}, {name:"Sphere", url:"3d-animations/sphere"}, {name:"Text", url:"3d-animations/text"}];
   const animations_list_2d =[{name:"Partial photo", url:"2d-animations/partial-photo"},{name:"Hide and seek", url:"2d-animations/hide-and-seek"}];
   return (
     <nav className={props.show?"side-nav open":"side-nav"}>
