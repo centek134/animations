@@ -3,7 +3,6 @@ $degrees: 18deg, 36deg, 54deg, 72deg, 90deg, 108deg, 126deg, 144deg, 162deg, 180
 .wrapper_sphere{
     width: 100%;
     min-height: 100vh;
-    background: rgb(123,255,148);
     background: linear-gradient(45deg, rgba(123,255,148,1) 0%, rgba(106,80,255,1) 100%);
     display: flex;
     align-items: center;

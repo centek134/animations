@@ -1,7 +1,6 @@
 .wrapper_sphere {
   width: 100%;
   min-height: 100vh;
-  background: rgb(123, 255, 148);
   background: linear-gradient(45deg, rgb(123, 255, 148) 0%, rgb(106, 80, 255) 100%);
   display: flex;
   align-items: center;
