@@ -10,6 +10,7 @@ import Circles from "./containers/3d_animations/Circles/Circles";
 import ImageBook from "./containers/3d_animations/ImageBook/ImageBook";
 import Sphere from "./containers/3d_animations/Sphere/Sphere";
 import Text from "./containers/3d_animations/Text/Text";
+import CurvedText from "./containers/3d_animations/CurvedText/CurvedText";
 //=====================================================
 
 //=============== 2D animations imports ===============
@@ -35,6 +36,7 @@ const [showSidebar, setShowSidebar] = useState(false);
         <Route path="/3d-animations/book" element={<ImageBook/>}/>
         <Route path="/3d-animations/sphere" element={<Sphere/>}/>
         <Route path="/3d-animations/text" element={<Text/>}/>
+        <Route path="/3d-animations/curved-text" element={<CurvedText/>}/>
         {/*2d animations routes */}
         <Route path="/2d-animations/partial-photo" element={<PartialPhoto/>}/>
         <Route path="/2d-animations/hide-and-seek" element={<HideAndSeek/>}/>
