@@ -1,0 +1,170 @@
+.wrapper_curved_text {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgb(135, 250, 210);
+  background: linear-gradient(45deg, rgb(135, 250, 210) 0%, rgb(34, 157, 114) 33%, rgb(80, 80, 80) 66%, rgb(0, 0, 0) 100%);
+  perspective: 500px;
+  perspective-origin: 50% calc(50% - 100px);
+}
+.wrapper_curved_text .scene {
+  display: flex;
+  transform-style: preserve-3d;
+  -webkit-animation: rotate 24s infinite linear;
+          animation: rotate 24s infinite linear;
+}
+.wrapper_curved_text .scene .item {
+  position: absolute;
+  width: 40px;
+  height: 100px;
+  overflow: hidden;
+  transform: translate(-50%, -50%) rotateY(var(--angle)) translateZ(158px);
+}
+.wrapper_curved_text .scene .item::before {
+  position: absolute;
+  left: var(--left);
+  content: "Hello there, enjoy yourself";
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 85px;
+  color: hsl(var(--color), 75%, 75%);
+}
+.wrapper_curved_text .scene .item:nth-child(1) {
+  --left: 0px;
+  --angle:0deg;
+  --color: 0;
+}
+.wrapper_curved_text .scene .item:nth-child(2) {
+  --left: -40px;
+  --angle:14.4deg;
+  --color: 14.4;
+}
+.wrapper_curved_text .scene .item:nth-child(3) {
+  --left: -80px;
+  --angle:28.8deg;
+  --color: 28.8;
+}
+.wrapper_curved_text .scene .item:nth-child(4) {
+  --left: -120px;
+  --angle:43.2deg;
+  --color: 43.2;
+}
+.wrapper_curved_text .scene .item:nth-child(5) {
+  --left: -160px;
+  --angle:57.6deg;
+  --color: 57.6;
+}
+.wrapper_curved_text .scene .item:nth-child(6) {
+  --left: -200px;
+  --angle:72deg;
+  --color: 72;
+}
+.wrapper_curved_text .scene .item:nth-child(7) {
+  --left: -240px;
+  --angle:86.4deg;
+  --color: 86.4;
+}
+.wrapper_curved_text .scene .item:nth-child(8) {
+  --left: -280px;
+  --angle:100.8deg;
+  --color: 100.8;
+}
+.wrapper_curved_text .scene .item:nth-child(9) {
+  --left: -320px;
+  --angle:115.2deg;
+  --color: 115.2;
+}
+.wrapper_curved_text .scene .item:nth-child(10) {
+  --left: -360px;
+  --angle:129.6deg;
+  --color: 129.6;
+}
+.wrapper_curved_text .scene .item:nth-child(11) {
+  --left: -400px;
+  --angle:144deg;
+  --color: 144;
+}
+.wrapper_curved_text .scene .item:nth-child(12) {
+  --left: -440px;
+  --angle:158.4deg;
+  --color: 158.4;
+}
+.wrapper_curved_text .scene .item:nth-child(13) {
+  --left: -480px;
+  --angle:172.8deg;
+  --color: 172.8;
+}
+.wrapper_curved_text .scene .item:nth-child(14) {
+  --left: -520px;
+  --angle:187.2deg;
+  --color: 187.2;
+}
+.wrapper_curved_text .scene .item:nth-child(15) {
+  --left: -560px;
+  --angle:201.6deg;
+  --color: 201.6;
+}
+.wrapper_curved_text .scene .item:nth-child(16) {
+  --left: -600px;
+  --angle:216deg;
+  --color: 216;
+}
+.wrapper_curved_text .scene .item:nth-child(17) {
+  --left: -640px;
+  --angle:230.4deg;
+  --color: 230.4;
+}
+.wrapper_curved_text .scene .item:nth-child(18) {
+  --left: -680px;
+  --angle:244.8deg;
+  --color: 244.8;
+}
+.wrapper_curved_text .scene .item:nth-child(19) {
+  --left: -720px;
+  --angle:259.2deg;
+  --color: 259.2;
+}
+.wrapper_curved_text .scene .item:nth-child(20) {
+  --left: -760px;
+  --angle:273.6deg;
+  --color: 273.6;
+}
+.wrapper_curved_text .scene .item:nth-child(21) {
+  --left: -800px;
+  --angle:288deg;
+  --color: 288;
+}
+.wrapper_curved_text .scene .item:nth-child(22) {
+  --left: -840px;
+  --angle:302.4deg;
+  --color: 302.4;
+}
+.wrapper_curved_text .scene .item:nth-child(23) {
+  --left: -880px;
+  --angle:316.8deg;
+  --color: 316.8;
+}
+.wrapper_curved_text .scene .item:nth-child(24) {
+  --left: -920px;
+  --angle:331.2deg;
+  --color: 331.2;
+}
+.wrapper_curved_text .scene .item:nth-child(25) {
+  --left: -960px;
+  --angle:345.6deg;
+  --color: 345.6;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateY(360deg);
+  }
+}/*# sourceMappingURL=CurvedText.css.map */
