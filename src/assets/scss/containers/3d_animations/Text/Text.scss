@@ -1,7 +1,7 @@
 .wrapper_text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  place-content: center;
   width: 100%;
   height: 100%;
   background: rgb(255, 189, 123);
@@ -12,35 +12,34 @@
     rgba(214, 112, 112, 1) 66%,
     rgba(255, 80, 80, 1) 100%
   );
+  perspective: 500px;
   .scene {
-    position: relative;
-    width: 100%;
-    height: 300px;
+    width: 370px;
     transform-style: preserve-3d;
-    .box {
+    animation: rotate_text 24s linear infinite;
+    .item {
       position: absolute;
       width: 100%;
-      height: 100%;
-      transform-style: preserve-3d;
-      .item {
-        text-align: center;
+      transform: rotateX(var(--angle)) translateY(50px);
+      &:before {
+        content: "Hello world!";
         position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
-        transform: rotateX(calc(var(--i) * 15deg));
-        &:before {
-          content: "test";
-          position: absolute;
-          font-size: 120px;
-          top: 0;
-          left: 0;
-          width: 100%;
-          color: #fff;
-          text-shadow: 0 0 10px #000;
-        }
+        height: max-content;
+        font-size: 70px;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 10px #000;
       }
     }
+    @for $i from 0 to 20{
+      .item:nth-child(#{$i + 1}){
+        --angle:#{calc(360deg/20 * $i)};
+      }
+    }
+  } 
+}
+@keyframes rotate_text{
+  100%{
+    transform: rotateX(-360deg);
   }
 }

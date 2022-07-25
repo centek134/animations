@@ -1,40 +1,104 @@
 .wrapper_text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  place-content: center;
   width: 100%;
   height: 100%;
   background: rgb(255, 189, 123);
   background: linear-gradient(45deg, rgb(255, 189, 123) 0%, rgb(191, 161, 116) 33%, rgb(214, 112, 112) 66%, rgb(255, 80, 80) 100%);
+  perspective: 500px;
 }
 .wrapper_text .scene {
-  position: relative;
-  width: 100%;
-  height: 300px;
+  width: 370px;
   transform-style: preserve-3d;
+  -webkit-animation: rotate_text 24s linear infinite;
+          animation: rotate_text 24s linear infinite;
 }
-.wrapper_text .scene .box {
+.wrapper_text .scene .item {
   position: absolute;
   width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
+  transform: rotateX(var(--angle)) translateY(50px);
 }
-.wrapper_text .scene .box .item {
-  text-align: center;
+.wrapper_text .scene .item:before {
+  content: "Hello world!";
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  transform: rotateX(calc(var(--i) * 15deg));
-}
-.wrapper_text .scene .box .item:before {
-  content: "test";
-  position: absolute;
-  font-size: 120px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: #fff;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 70px;
+  color: rgb(255, 255, 255);
   text-shadow: 0 0 10px #000;
+}
+.wrapper_text .scene .item:nth-child(1) {
+  --angle:0deg;
+}
+.wrapper_text .scene .item:nth-child(2) {
+  --angle:18deg;
+}
+.wrapper_text .scene .item:nth-child(3) {
+  --angle:36deg;
+}
+.wrapper_text .scene .item:nth-child(4) {
+  --angle:54deg;
+}
+.wrapper_text .scene .item:nth-child(5) {
+  --angle:72deg;
+}
+.wrapper_text .scene .item:nth-child(6) {
+  --angle:90deg;
+}
+.wrapper_text .scene .item:nth-child(7) {
+  --angle:108deg;
+}
+.wrapper_text .scene .item:nth-child(8) {
+  --angle:126deg;
+}
+.wrapper_text .scene .item:nth-child(9) {
+  --angle:144deg;
+}
+.wrapper_text .scene .item:nth-child(10) {
+  --angle:162deg;
+}
+.wrapper_text .scene .item:nth-child(11) {
+  --angle:180deg;
+}
+.wrapper_text .scene .item:nth-child(12) {
+  --angle:198deg;
+}
+.wrapper_text .scene .item:nth-child(13) {
+  --angle:216deg;
+}
+.wrapper_text .scene .item:nth-child(14) {
+  --angle:234deg;
+}
+.wrapper_text .scene .item:nth-child(15) {
+  --angle:252deg;
+}
+.wrapper_text .scene .item:nth-child(16) {
+  --angle:270deg;
+}
+.wrapper_text .scene .item:nth-child(17) {
+  --angle:288deg;
+}
+.wrapper_text .scene .item:nth-child(18) {
+  --angle:306deg;
+}
+.wrapper_text .scene .item:nth-child(19) {
+  --angle:324deg;
+}
+.wrapper_text .scene .item:nth-child(20) {
+  --angle:342deg;
+}
+
+@-webkit-keyframes rotate_text {
+  100% {
+    transform: rotateX(-360deg);
+  }
+}
+
+@keyframes rotate_text {
+  100% {
+    transform: rotateX(-360deg);
+  }
 }/*# sourceMappingURL=Text.css.map */
