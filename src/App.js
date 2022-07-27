@@ -14,7 +14,6 @@ import CurvedText from "./containers/3d_animations/CurvedText/CurvedText";
 //=====================================================
 
 //=============== 2D animations imports ===============
-import PartialPhoto from "./containers/2d_animations/PartialPhoto/PartialPhoto";
 import HideAndSeek from "./containers/2d_animations/HideAndSeek/HideAndSeek";
 
 const App = () => {
@@ -38,7 +37,6 @@ const [showSidebar, setShowSidebar] = useState(false);
         <Route path="/3d-animations/text" element={<Text/>}/>
         <Route path="/3d-animations/curved-text" element={<CurvedText/>}/>
         {/*2d animations routes */}
-        <Route path="/2d-animations/partial-photo" element={<PartialPhoto/>}/>
         <Route path="/2d-animations/hide-and-seek" element={<HideAndSeek/>}/>
       </Routes>
       </div>
