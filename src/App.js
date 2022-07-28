@@ -11,11 +11,13 @@ import ImageBook from "./containers/3d_animations/ImageBook/ImageBook";
 import Sphere from "./containers/3d_animations/Sphere/Sphere";
 import Text from "./containers/3d_animations/Text/Text";
 import CurvedText from "./containers/3d_animations/CurvedText/CurvedText";
+import MovingPillars from "./containers/3d_animations/MovingPillars/MovingPillars";
 //=====================================================
 
 //=============== 2D animations imports ===============
 import HideAndSeek from "./containers/2d_animations/HideAndSeek/HideAndSeek";
 
+//=====================================================
 const App = () => {
 const [showSidebar, setShowSidebar] = useState(false);
 
@@ -36,6 +38,8 @@ const [showSidebar, setShowSidebar] = useState(false);
         <Route path="/3d-animations/sphere" element={<Sphere/>}/>
         <Route path="/3d-animations/text" element={<Text/>}/>
         <Route path="/3d-animations/curved-text" element={<CurvedText/>}/>
+        <Route path="/3d-animations/moving-pillars" element={<MovingPillars/>}/>
+
         {/*2d animations routes */}
         <Route path="/2d-animations/hide-and-seek" element={<HideAndSeek/>}/>
       </Routes>
