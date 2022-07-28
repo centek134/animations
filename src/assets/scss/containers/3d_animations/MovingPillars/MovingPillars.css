@@ -1,0 +1,135 @@
+.wrapper_moving_pillars {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+.wrapper_moving_pillars .list {
+  position: relative;
+  width: 200px;
+  height: 400px;
+  list-style-type: none;
+  transform-style: preserve-3d;
+  transform: skewY(-15deg);
+}
+.wrapper_moving_pillars .list .item {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  top: calc(var(--space) * 40px);
+  background-color: #394141;
+  z-index: calc(var(--zindex) * -1);
+  -webkit-animation: moving_pillars_move 4.5s linear infinite;
+          animation: moving_pillars_move 4.5s linear infinite;
+  -webkit-animation-delay: calc(var(--delay) * 1s);
+          animation-delay: calc(var(--delay) * 1s);
+  transition: 1s;
+  cursor: pointer;
+}
+.wrapper_moving_pillars .list .item:hover {
+  background-color: rgb(43, 214, 0);
+}
+.wrapper_moving_pillars .list .item:hover::after {
+  background-color: rgb(43, 214, 0);
+}
+.wrapper_moving_pillars .list .item:hover::before {
+  background-color: rgb(43, 214, 0);
+}
+.wrapper_moving_pillars .list .item::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: -100px;
+  width: 100px;
+  height: 40px;
+  background-color: #2f3636;
+  transform: skewY(45deg);
+  transform-origin: right;
+  transition: inherit;
+}
+.wrapper_moving_pillars .list .item::after {
+  position: absolute;
+  content: "";
+  top: -100px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  background-color: #464d4d;
+  transform: skewX(45deg);
+  transform-origin: bottom;
+  transition: inherit;
+}
+@-webkit-keyframes moving_pillars_move {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  33% {
+    transform: translateX(70px);
+  }
+  66% {
+    transform: translateX(-70px);
+  }
+}
+@keyframes moving_pillars_move {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  33% {
+    transform: translateX(70px);
+  }
+  66% {
+    transform: translateX(-70px);
+  }
+}
+.wrapper_moving_pillars .list .item:nth-child(0) {
+  --zindex: 0;
+  --space: 0;
+  --delay: 0;
+}
+.wrapper_moving_pillars .list .item:nth-child(1) {
+  --zindex: 1;
+  --space: 1;
+  --delay: 1;
+}
+.wrapper_moving_pillars .list .item:nth-child(2) {
+  --zindex: 2;
+  --space: 2;
+  --delay: 2;
+}
+.wrapper_moving_pillars .list .item:nth-child(3) {
+  --zindex: 3;
+  --space: 3;
+  --delay: 3;
+}
+.wrapper_moving_pillars .list .item:nth-child(4) {
+  --zindex: 4;
+  --space: 4;
+  --delay: 4;
+}
+.wrapper_moving_pillars .list .item:nth-child(5) {
+  --zindex: 5;
+  --space: 5;
+  --delay: 5;
+}
+.wrapper_moving_pillars .list .item:nth-child(6) {
+  --zindex: 6;
+  --space: 6;
+  --delay: 6;
+}
+.wrapper_moving_pillars .list .item:nth-child(7) {
+  --zindex: 7;
+  --space: 7;
+  --delay: 7;
+}
+.wrapper_moving_pillars .list .item:nth-child(8) {
+  --zindex: 8;
+  --space: 8;
+  --delay: 8;
+}
+.wrapper_moving_pillars .list .item:nth-child(9) {
+  --zindex: 9;
+  --space: 9;
+  --delay: 9;
+}/*# sourceMappingURL=MovingPillars.css.map */

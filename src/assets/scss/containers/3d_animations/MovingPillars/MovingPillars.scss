@@ -1,0 +1,81 @@
+.wrapper_moving_pillars{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    .list{
+        position: relative;
+        width: 200px;
+        height: 400px;
+        list-style-type: none;
+        transform-style: preserve-3d;
+        transform: skewY(-15deg);
+        .item{
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            top: calc(var(--space)* 40px);
+            background-color: #394141;
+            z-index: calc(var(--zindex) * -1);
+            animation: moving_pillars_move 4.5s linear infinite;
+            animation-delay: calc(var(--delay) * 1s);
+            transition: 1s;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(43, 214, 0);
+                &::after{
+                    background-color: rgb(43, 214, 0);
+                }
+                &::before{
+                    background-color: rgb(43, 214, 0);
+                }
+            }
+    
+            &::before{
+                position: absolute;
+                content: "";
+                top: 0px;
+                left: -100px;
+                width: 100px;
+                height: 40px;
+                background-color: #2f3636;
+                transform: skewY(45deg);
+                transform-origin: right;
+                transition: inherit;
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                top: -100px;
+                left: 0px;
+                width: 100%;
+                height: 100px;
+                background-color: #464d4d;
+                transform: skewX(45deg);
+                transform-origin: bottom;
+                transition: inherit;
+            }
+            
+            @keyframes moving_pillars_move {
+                0%,100%{
+                    transform: translateX(0px);
+                }
+                33%{
+                    transform: translateX(70px);
+                }
+                66%{
+                    transform: translateX(-70px);
+                }
+            }
+        }
+        @for $i from 0 to 10 {
+            .item:nth-child(#{$i}){ 
+                --zindex: #{$i};
+                --space: #{$i};
+                --delay: #{$i};
+            }
+        }
+    }
+}
