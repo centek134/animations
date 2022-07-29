@@ -12,6 +12,7 @@ import Sphere from "./containers/3d_animations/Sphere/Sphere";
 import Text from "./containers/3d_animations/Text/Text";
 import CurvedText from "./containers/3d_animations/CurvedText/CurvedText";
 import MovingPillars from "./containers/3d_animations/MovingPillars/MovingPillars";
+import Dots from "./containers/3d_animations/Dots/Dots";
 //=====================================================
 
 //=============== 2D animations imports ===============
@@ -39,6 +40,7 @@ const [showSidebar, setShowSidebar] = useState(false);
         <Route path="/3d-animations/text" element={<Text/>}/>
         <Route path="/3d-animations/curved-text" element={<CurvedText/>}/>
         <Route path="/3d-animations/moving-pillars" element={<MovingPillars/>}/>
+        <Route path="/3d-animations/dots" element={<Dots/>}/>
 
         {/*2d animations routes */}
         <Route path="/2d-animations/hide-and-seek" element={<HideAndSeek/>}/>
