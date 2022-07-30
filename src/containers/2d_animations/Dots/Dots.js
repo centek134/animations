@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../assets/scss/containers/2d_animations/Dots/Dots.css";
+import "../../../assets/scss/containers/2d_animations/Dots/Dots.scss";
 
 const Dots = () => {
   return (
