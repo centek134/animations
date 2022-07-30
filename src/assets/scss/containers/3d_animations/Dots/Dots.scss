@@ -18,9 +18,20 @@ $dot_size: 10px;
       border-radius: 50%;
       background-color: hsl(var(--hue), 90%, 70%);
       animation: dots_move 5s infinite ease-in-out;
+      animation-delay: calc(var(--delay_2) + var(--delay));
+
       @for $i from 0 to 400 {
         &:nth-child(#{$i + 1}) {
           --hue: #{random() * 300};
+        }
+      }
+
+      @for $i from 0 to 20 {
+        &:nth-child(20n - #{$i}){
+          --delay: #{$i * 0.3s * 1};
+        }
+        &:nth-child(n + #{20 * $i}){
+          --delay_2: #{$i * 0.2s * - 1};
         }
       }
     }
