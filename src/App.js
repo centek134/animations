@@ -1,5 +1,5 @@
 import {React, useState} from "react";
-import "./assets/scss/containers/App/App.scss";
+import "./assets/scss/containers/App/App.css";
 import {Routes, Route} from  "react-router-dom";
 import HomePage from "./containers/HomePage/HomePage.js";
 import Sidebar from "./components/Sidebar/Sidebar.js";
