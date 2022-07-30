@@ -1,0 +1,54 @@
+.home_page {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #5c5252;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    h1{
+      font-size: 55px;
+      &:before{
+          animation-name: write-animation;
+      }
+    }
+    h2{
+        font-size: 50px;
+      &:before{
+          animation-name: write-animation-delay;
+          animation-delay: 3s;
+      }
+    } 
+    h1, h2{
+      width: 100%;
+      position: relative;
+      color: #1d9099;
+      letter-spacing: 5px;
+      text-shadow: 3px 3px 0 #e79c10, 6px 6px 0 #d53a33;
+      text-align: center;
+      font-family: "Sarpanch", sans-serif;
+      &:before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-color: #5c5252;
+          animation-duration: 3s;
+          animation-fill-mode: forwards;
+      }
+    }
+  @keyframes write-animation {
+      100%{
+          left: 100%;
+      }
+  }
+  @keyframes write-animation-delay {
+      100%{
+          left: 100%;
+      }
+  }
+  }
+  

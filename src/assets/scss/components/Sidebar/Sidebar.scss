@@ -1,0 +1,73 @@
+$sidebar_background:#353030;
+$white_color:#ffffff;
+.side-nav{
+    min-height: 100%;
+    min-width: 250px;
+    background-color: $sidebar_background;
+    color: $white_color;
+    .logo{
+        width: 100%;
+        svg{
+            width: 100%;
+            height: 80px;
+            #rectangle, #polygon{
+                stroke: $white_color;
+            }
+            #animations{
+                fill: $white_color;
+                opacity: 0;
+                animation-name: logo_animations;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+            #polygon{
+                stroke-dasharray: 250;
+                stroke-dashoffset: 250;
+                stroke: #f5a937;
+                animation-name: logo_polygon;
+                animation-duration: 2.5s;
+                animation-fill-mode: forwards;
+            }
+            #square{
+                stroke-dasharray: 250;
+                stroke-dashoffset: 250;
+                stroke: #ff0000;
+                animation-name: logo_square;
+                animation-duration: 2.5s;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+    @media screen and (max-width:700px){
+        display: none;
+    }
+    .sidebar_list .home_page_link{
+        width: 100%;
+        font-size: 30px;
+        text-decoration: none;
+        color: $white_color;
+    }
+    @keyframes logo_polygon {
+        100%{
+            stroke-dasharray: 250;
+            stroke-dashoffset: 0;
+        }
+    }
+    @keyframes logo_square {
+        100%{
+            stroke-dasharray: 120;
+
+        }
+    }
+    @keyframes logo_animations {
+        100%{
+            opacity: 1;
+        }
+    }
+}
+.side-nav.open{
+    @media screen and (max-width:700px){
+        display: block;
+        width: 100%;
+    }
+} 
