@@ -1,5 +1,5 @@
 import {React, useState} from "react";
-import "./assets/scss/containers/App/App.css";
+import './assets/scss/containers/App/App.css';
 import {Routes, Route} from  "react-router-dom";
 import HomePage from "./containers/HomePage/HomePage.js";
 import Sidebar from "./components/Sidebar/Sidebar.js";
@@ -12,10 +12,10 @@ import Sphere from "./containers/3d_animations/Sphere/Sphere";
 import Text from "./containers/3d_animations/Text/Text";
 import CurvedText from "./containers/3d_animations/CurvedText/CurvedText";
 import MovingPillars from "./containers/3d_animations/MovingPillars/MovingPillars";
-import Dots from "./containers/2d_animations/Dots/Dots";
 //=====================================================
 
 //=============== 2D animations imports ===============
+import Dots from "./containers/2d_animations/Dots/Dots";
 import HideAndSeek from "./containers/2d_animations/HideAndSeek/HideAndSeek";
 
 //=====================================================
