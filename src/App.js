@@ -43,7 +43,7 @@ const [showSidebar, setShowSidebar] = useState(false);
 
         {/*2d animations routes */}
         <Route path="/2d-animations/hide-and-seek" element={<HideAndSeek/>}/>
-        <Route path="/3d-animations/dots" element={<Dots/>}/>
+        <Route path="/2d-animations/dots" element={<Dots/>}/>
       </Routes>
       </div>
     </div>

@@ -8,7 +8,7 @@ const Sidebar = (props) => {
     {name:"ImageBook", url:"3d-animations/book"}, {name:"Sphere", url:"3d-animations/sphere"}, {name:"Text", url:"3d-animations/text"}, {name:"Curved text", url:"3d-animations/curved-text"},
     {name:"Moving Pillars", url:"3d-animations/moving-pillars"}
   ];
-  const animations_list_2d =[{name:"Hide and seek", url:"2d-animations/hide-and-seek"}, {name:"Dots", url:"3d-animations/dots"}];
+  const animations_list_2d =[{name:"Hide and seek", url:"2d-animations/hide-and-seek"}, {name:"Dots", url:"2d-animations/dots"}];
   return (
     <nav className={props.show?"side-nav open":"side-nav"}>
       <header className="logo">
