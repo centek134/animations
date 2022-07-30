@@ -6,9 +6,9 @@ const Sidebar = (props) => {
   const animations_list_3d = [
     {name: "Menu Animated", url:"3d-animations/menu-animated"},{name:"Cube", url:"3d-animations/cube"}, {name:"Circles", url:"3d-animations/circles"},
     {name:"ImageBook", url:"3d-animations/book"}, {name:"Sphere", url:"3d-animations/sphere"}, {name:"Text", url:"3d-animations/text"}, {name:"Curved text", url:"3d-animations/curved-text"},
-    {name:"Moving Pillars", url:"3d-animations/moving-pillars"}, {name:"Dots", url:"3d-animations/dots"}
+    {name:"Moving Pillars", url:"3d-animations/moving-pillars"}
   ];
-  const animations_list_2d =[{name:"Hide and seek", url:"2d-animations/hide-and-seek"}];
+  const animations_list_2d =[{name:"Hide and seek", url:"2d-animations/hide-and-seek"}, {name:"Dots", url:"3d-animations/dots"}];
   return (
     <nav className={props.show?"side-nav open":"side-nav"}>
       <header className="logo">
