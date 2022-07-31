@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../assets/scss/containers/3d_animations/MovingPillars/MovingPillars.css";
 
-const MovingPillars = () => {
+export const MovingPillars = () => {
   return (
     <section className="wrapper_moving_pillars">
       <ul className="list">
@@ -19,4 +19,3 @@ const MovingPillars = () => {
     </section>
   );
 };
-export default MovingPillars;

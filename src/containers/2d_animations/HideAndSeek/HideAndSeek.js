@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../assets/scss/containers/2d_animations/HideAndSeek/HideAndSeek.css";
 
-const HideAndSeek = () => {
+export const HideAndSeek = () => {
   return (
     <div className="wrapper_hide_and_seek">
       <div className="scene">
@@ -12,5 +12,3 @@ const HideAndSeek = () => {
     </div>
   );
 };
-
-export default HideAndSeek;

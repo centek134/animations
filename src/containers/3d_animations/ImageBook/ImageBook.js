@@ -30,4 +30,3 @@ export const ImageBook = () => {
     </section>
   );
 };
-export default ImageBook;

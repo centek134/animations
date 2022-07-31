@@ -33,4 +33,3 @@ export const CurvedText = () => {
     </section>
   );
 };
-export default CurvedText;

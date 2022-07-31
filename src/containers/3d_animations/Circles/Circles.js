@@ -1,6 +1,7 @@
 import React from 'react';
 import "../../../assets/scss/containers/3d_animations/Circles/Circles.css";
-const Circles = () => {
+
+export const Circles = () => {
   return (
     <section className="wrapper_circles">
         <div className="scene">
@@ -19,5 +20,3 @@ const Circles = () => {
     </section>
   );
 };
-
-export default Circles;

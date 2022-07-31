@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../assets/scss/containers/2d_animations/Dots/Dots.css";
 
-const Dots = () => {
+export const Dots = () => {
   return (
     <section className="wrapper_dots">
         <div className="scene">
@@ -409,4 +409,3 @@ const Dots = () => {
     </section>
   );
 };
-export default Dots;

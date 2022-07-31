@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../assets/scss/containers/3d_animations/Sphere/Sphere.css";
-const Sphere = () => {
+export const Sphere = () => {
   return (
     <section className="wrapper_sphere">
         <div className="sphere">
@@ -28,5 +28,3 @@ const Sphere = () => {
     </section>
   );
 };
-
-export default Sphere;

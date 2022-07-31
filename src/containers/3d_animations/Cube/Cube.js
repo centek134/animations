@@ -1,6 +1,7 @@
 import React from "react";
 import "../../../assets/scss/containers/3d_animations/Cube/Cube.css";
-const Cube = () => {
+
+export const Cube = () => {
   return (
     <section className="wrapper_cube">
       <div className="scene">
@@ -19,5 +20,3 @@ const Cube = () => {
     </section>
   );
 };
-
-export default Cube;

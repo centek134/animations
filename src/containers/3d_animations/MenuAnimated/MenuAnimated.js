@@ -3,7 +3,7 @@ import React from "react";
 import "../../../assets/scss/containers/3d_animations/MenuAnimated/MenuAnimated.css";
 
 
-const MenuAnimated = () => {
+export const MenuAnimated = () => {
     const url = "#";
 
   return (
@@ -31,5 +31,3 @@ const MenuAnimated = () => {
     </section>
   );
 };
-
-export default MenuAnimated;
