@@ -2,15 +2,20 @@ import React from "react";
 import "../../assets/scss/components/Sidebar/Sidebar.css";
 import SidebarCategory from '../SidebarCategory/SidebarCategory';
 import {Link} from "react-router-dom";
+
 const Sidebar = (props) => {
+
   const animations_list_3d = [
     {name: "Menu Animated", url:"3d-animations/menu-animated"},{name:"Cube", url:"3d-animations/cube"}, {name:"Circles", url:"3d-animations/circles"},
     {name:"ImageBook", url:"3d-animations/book"}, {name:"Sphere", url:"3d-animations/sphere"}, {name:"Text", url:"3d-animations/text"}, {name:"Curved text", url:"3d-animations/curved-text"},
     {name:"Moving Pillars", url:"3d-animations/moving-pillars"}
   ];
+
   const animations_list_2d =[{name:"Hide and seek", url:"2d-animations/hide-and-seek"}, {name:"Dots", url:"2d-animations/dots"}];
+
   return (
     <nav className={props.show?"side-nav open":"side-nav"}>
+      {/*==== LOGO ====*/}
       <header className="logo">
           <svg viewBox="0 0 162 64" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g>
@@ -20,6 +25,7 @@ const Sidebar = (props) => {
             </g>
           </svg>
       </header>
+      {/*==== LOGO END ====*/}
       <div className="sidebar_list">
         <Link className="home_page_link" to={"/"}>Home Page</Link>
         <SidebarCategory list = {animations_list_3d} category_text="3D Animations"/>
