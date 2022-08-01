@@ -8,7 +8,7 @@ const Sidebar = (props) => {
   const animations_list_3d = [
     {name: "Menu Animated", url:"3d-animations/menu-animated"},{name:"Cube", url:"3d-animations/cube"}, {name:"Circles", url:"3d-animations/circles"},
     {name:"ImageBook", url:"3d-animations/book"}, {name:"Sphere", url:"3d-animations/sphere"}, {name:"Text", url:"3d-animations/text"}, {name:"Curved text", url:"3d-animations/curved-text"},
-    {name:"Moving Pillars", url:"3d-animations/moving-pillars"}
+    {name:"Moving Pillars", url:"3d-animations/moving-pillars"}, {name:"Transformer", url:"3d-animations/transformer"}
   ];
 
   const animations_list_2d =[{name:"Hide and seek", url:"2d-animations/hide-and-seek"}, {name:"Dots", url:"2d-animations/dots"}];
@@ -28,8 +28,8 @@ const Sidebar = (props) => {
       {/*==== LOGO END ====*/}
       <div className="sidebar_list">
         <Link className="home_page_link" to={"/"}>Home Page</Link>
-        <SidebarCategory list = {animations_list_3d} category_text="3D Animations"/>
-        <SidebarCategory list = {animations_list_2d} category_text="2D Animations"/>
+        <SidebarCategory setShow={props.setShow} list = {animations_list_3d} category_text="3D Animations"/>
+        <SidebarCategory setShow={props.setShow} list = {animations_list_2d} category_text="2D Animations"/>
       </div>
     </nav>
   );

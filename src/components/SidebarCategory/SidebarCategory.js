@@ -12,7 +12,7 @@ const SidebarCategory = (props) => {
           {hideList? null
           :
           list.map((item,i) => {
-            return <li className='list_item' key={i}><Link className='list_item_link' to={item.url}>{item.name}</Link></li>
+            return <li onClick={props.setShow} className='list_item' key={i}><Link className='list_item_link' to={item.url}>{item.name}</Link></li>
           })}
         </ul>
       </div>
