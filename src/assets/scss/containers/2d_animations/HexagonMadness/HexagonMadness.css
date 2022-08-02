@@ -1,0 +1,549 @@
+.wrapper_hexamania {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000;
+}
+.wrapper_hexamania .hex {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  z-index: var(--index);
+  transform: scale(var(--scale)) translateY(var(--pos_y));
+  transform-origin: left;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  background-color: hsl(var(--hue), 80%, 80%);
+  -webkit-animation: rotate_hexagon_madness 7s var(--delay) ease-in-out infinite;
+          animation: rotate_hexagon_madness 7s var(--delay) ease-in-out infinite;
+}
+@media screen and (max-width: 850px) {
+  .wrapper_hexamania .hex {
+    left: 90%;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .wrapper_hexamania .hex {
+    left: 100%;
+    width: 40px;
+    height: 40px;
+  }
+}
+.wrapper_hexamania .hex::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 0, 0);
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.wrapper_hexamania .hex:nth-child(0) {
+  --hue: 0;
+  --index:0;
+  --scale:0;
+  --pos_y:0px;
+  --pos_x:0px;
+  --delay:0s;
+}
+.wrapper_hexamania .hex:nth-child(1) {
+  --hue: 6;
+  --index:1;
+  --scale:0.05;
+  --pos_y:-0.5px;
+  --pos_x:-0.8px;
+  --delay:0.15s;
+}
+.wrapper_hexamania .hex:nth-child(2) {
+  --hue: 12;
+  --index:2;
+  --scale:0.1;
+  --pos_y:-1px;
+  --pos_x:-1.6px;
+  --delay:0.3s;
+}
+.wrapper_hexamania .hex:nth-child(3) {
+  --hue: 18;
+  --index:3;
+  --scale:0.15;
+  --pos_y:-1.5px;
+  --pos_x:-2.4px;
+  --delay:0.45s;
+}
+.wrapper_hexamania .hex:nth-child(4) {
+  --hue: 24;
+  --index:4;
+  --scale:0.2;
+  --pos_y:-2px;
+  --pos_x:-3.2px;
+  --delay:0.6s;
+}
+.wrapper_hexamania .hex:nth-child(5) {
+  --hue: 30;
+  --index:5;
+  --scale:0.25;
+  --pos_y:-2.5px;
+  --pos_x:-4px;
+  --delay:0.75s;
+}
+.wrapper_hexamania .hex:nth-child(6) {
+  --hue: 36;
+  --index:6;
+  --scale:0.3;
+  --pos_y:-3px;
+  --pos_x:-4.8px;
+  --delay:0.9s;
+}
+.wrapper_hexamania .hex:nth-child(7) {
+  --hue: 42;
+  --index:7;
+  --scale:0.35;
+  --pos_y:-3.5px;
+  --pos_x:-5.6px;
+  --delay:1.05s;
+}
+.wrapper_hexamania .hex:nth-child(8) {
+  --hue: 48;
+  --index:8;
+  --scale:0.4;
+  --pos_y:-4px;
+  --pos_x:-6.4px;
+  --delay:1.2s;
+}
+.wrapper_hexamania .hex:nth-child(9) {
+  --hue: 54;
+  --index:9;
+  --scale:0.45;
+  --pos_y:-4.5px;
+  --pos_x:-7.2px;
+  --delay:1.35s;
+}
+.wrapper_hexamania .hex:nth-child(10) {
+  --hue: 60;
+  --index:10;
+  --scale:0.5;
+  --pos_y:-5px;
+  --pos_x:-8px;
+  --delay:1.5s;
+}
+.wrapper_hexamania .hex:nth-child(11) {
+  --hue: 66;
+  --index:11;
+  --scale:0.55;
+  --pos_y:-5.5px;
+  --pos_x:-8.8px;
+  --delay:1.65s;
+}
+.wrapper_hexamania .hex:nth-child(12) {
+  --hue: 72;
+  --index:12;
+  --scale:0.6;
+  --pos_y:-6px;
+  --pos_x:-9.6px;
+  --delay:1.8s;
+}
+.wrapper_hexamania .hex:nth-child(13) {
+  --hue: 78;
+  --index:13;
+  --scale:0.65;
+  --pos_y:-6.5px;
+  --pos_x:-10.4px;
+  --delay:1.95s;
+}
+.wrapper_hexamania .hex:nth-child(14) {
+  --hue: 84;
+  --index:14;
+  --scale:0.7;
+  --pos_y:-7px;
+  --pos_x:-11.2px;
+  --delay:2.1s;
+}
+.wrapper_hexamania .hex:nth-child(15) {
+  --hue: 90;
+  --index:15;
+  --scale:0.75;
+  --pos_y:-7.5px;
+  --pos_x:-12px;
+  --delay:2.25s;
+}
+.wrapper_hexamania .hex:nth-child(16) {
+  --hue: 96;
+  --index:16;
+  --scale:0.8;
+  --pos_y:-8px;
+  --pos_x:-12.8px;
+  --delay:2.4s;
+}
+.wrapper_hexamania .hex:nth-child(17) {
+  --hue: 102;
+  --index:17;
+  --scale:0.85;
+  --pos_y:-8.5px;
+  --pos_x:-13.6px;
+  --delay:2.55s;
+}
+.wrapper_hexamania .hex:nth-child(18) {
+  --hue: 108;
+  --index:18;
+  --scale:0.9;
+  --pos_y:-9px;
+  --pos_x:-14.4px;
+  --delay:2.7s;
+}
+.wrapper_hexamania .hex:nth-child(19) {
+  --hue: 114;
+  --index:19;
+  --scale:0.95;
+  --pos_y:-9.5px;
+  --pos_x:-15.2px;
+  --delay:2.85s;
+}
+.wrapper_hexamania .hex:nth-child(20) {
+  --hue: 120;
+  --index:20;
+  --scale:1;
+  --pos_y:-10px;
+  --pos_x:-16px;
+  --delay:3s;
+}
+.wrapper_hexamania .hex:nth-child(21) {
+  --hue: 126;
+  --index:21;
+  --scale:1.05;
+  --pos_y:-10.5px;
+  --pos_x:-16.8px;
+  --delay:3.15s;
+}
+.wrapper_hexamania .hex:nth-child(22) {
+  --hue: 132;
+  --index:22;
+  --scale:1.1;
+  --pos_y:-11px;
+  --pos_x:-17.6px;
+  --delay:3.3s;
+}
+.wrapper_hexamania .hex:nth-child(23) {
+  --hue: 138;
+  --index:23;
+  --scale:1.15;
+  --pos_y:-11.5px;
+  --pos_x:-18.4px;
+  --delay:3.45s;
+}
+.wrapper_hexamania .hex:nth-child(24) {
+  --hue: 144;
+  --index:24;
+  --scale:1.2;
+  --pos_y:-12px;
+  --pos_x:-19.2px;
+  --delay:3.6s;
+}
+.wrapper_hexamania .hex:nth-child(25) {
+  --hue: 150;
+  --index:25;
+  --scale:1.25;
+  --pos_y:-12.5px;
+  --pos_x:-20px;
+  --delay:3.75s;
+}
+.wrapper_hexamania .hex:nth-child(26) {
+  --hue: 156;
+  --index:26;
+  --scale:1.3;
+  --pos_y:-13px;
+  --pos_x:-20.8px;
+  --delay:3.9s;
+}
+.wrapper_hexamania .hex:nth-child(27) {
+  --hue: 162;
+  --index:27;
+  --scale:1.35;
+  --pos_y:-13.5px;
+  --pos_x:-21.6px;
+  --delay:4.05s;
+}
+.wrapper_hexamania .hex:nth-child(28) {
+  --hue: 168;
+  --index:28;
+  --scale:1.4;
+  --pos_y:-14px;
+  --pos_x:-22.4px;
+  --delay:4.2s;
+}
+.wrapper_hexamania .hex:nth-child(29) {
+  --hue: 174;
+  --index:29;
+  --scale:1.45;
+  --pos_y:-14.5px;
+  --pos_x:-23.2px;
+  --delay:4.35s;
+}
+.wrapper_hexamania .hex:nth-child(30) {
+  --hue: 180;
+  --index:30;
+  --scale:1.5;
+  --pos_y:-15px;
+  --pos_x:-24px;
+  --delay:4.5s;
+}
+.wrapper_hexamania .hex:nth-child(31) {
+  --hue: 186;
+  --index:31;
+  --scale:1.55;
+  --pos_y:-15.5px;
+  --pos_x:-24.8px;
+  --delay:4.65s;
+}
+.wrapper_hexamania .hex:nth-child(32) {
+  --hue: 192;
+  --index:32;
+  --scale:1.6;
+  --pos_y:-16px;
+  --pos_x:-25.6px;
+  --delay:4.8s;
+}
+.wrapper_hexamania .hex:nth-child(33) {
+  --hue: 198;
+  --index:33;
+  --scale:1.65;
+  --pos_y:-16.5px;
+  --pos_x:-26.4px;
+  --delay:4.95s;
+}
+.wrapper_hexamania .hex:nth-child(34) {
+  --hue: 204;
+  --index:34;
+  --scale:1.7;
+  --pos_y:-17px;
+  --pos_x:-27.2px;
+  --delay:5.1s;
+}
+.wrapper_hexamania .hex:nth-child(35) {
+  --hue: 210;
+  --index:35;
+  --scale:1.75;
+  --pos_y:-17.5px;
+  --pos_x:-28px;
+  --delay:5.25s;
+}
+.wrapper_hexamania .hex:nth-child(36) {
+  --hue: 216;
+  --index:36;
+  --scale:1.8;
+  --pos_y:-18px;
+  --pos_x:-28.8px;
+  --delay:5.4s;
+}
+.wrapper_hexamania .hex:nth-child(37) {
+  --hue: 222;
+  --index:37;
+  --scale:1.85;
+  --pos_y:-18.5px;
+  --pos_x:-29.6px;
+  --delay:5.55s;
+}
+.wrapper_hexamania .hex:nth-child(38) {
+  --hue: 228;
+  --index:38;
+  --scale:1.9;
+  --pos_y:-19px;
+  --pos_x:-30.4px;
+  --delay:5.7s;
+}
+.wrapper_hexamania .hex:nth-child(39) {
+  --hue: 234;
+  --index:39;
+  --scale:1.95;
+  --pos_y:-19.5px;
+  --pos_x:-31.2px;
+  --delay:5.85s;
+}
+.wrapper_hexamania .hex:nth-child(40) {
+  --hue: 240;
+  --index:40;
+  --scale:2;
+  --pos_y:-20px;
+  --pos_x:-32px;
+  --delay:6s;
+}
+.wrapper_hexamania .hex:nth-child(41) {
+  --hue: 246;
+  --index:41;
+  --scale:2.05;
+  --pos_y:-20.5px;
+  --pos_x:-32.8px;
+  --delay:6.15s;
+}
+.wrapper_hexamania .hex:nth-child(42) {
+  --hue: 252;
+  --index:42;
+  --scale:2.1;
+  --pos_y:-21px;
+  --pos_x:-33.6px;
+  --delay:6.3s;
+}
+.wrapper_hexamania .hex:nth-child(43) {
+  --hue: 258;
+  --index:43;
+  --scale:2.15;
+  --pos_y:-21.5px;
+  --pos_x:-34.4px;
+  --delay:6.45s;
+}
+.wrapper_hexamania .hex:nth-child(44) {
+  --hue: 264;
+  --index:44;
+  --scale:2.2;
+  --pos_y:-22px;
+  --pos_x:-35.2px;
+  --delay:6.6s;
+}
+.wrapper_hexamania .hex:nth-child(45) {
+  --hue: 270;
+  --index:45;
+  --scale:2.25;
+  --pos_y:-22.5px;
+  --pos_x:-36px;
+  --delay:6.75s;
+}
+.wrapper_hexamania .hex:nth-child(46) {
+  --hue: 276;
+  --index:46;
+  --scale:2.3;
+  --pos_y:-23px;
+  --pos_x:-36.8px;
+  --delay:6.9s;
+}
+.wrapper_hexamania .hex:nth-child(47) {
+  --hue: 282;
+  --index:47;
+  --scale:2.35;
+  --pos_y:-23.5px;
+  --pos_x:-37.6px;
+  --delay:7.05s;
+}
+.wrapper_hexamania .hex:nth-child(48) {
+  --hue: 288;
+  --index:48;
+  --scale:2.4;
+  --pos_y:-24px;
+  --pos_x:-38.4px;
+  --delay:7.2s;
+}
+.wrapper_hexamania .hex:nth-child(49) {
+  --hue: 294;
+  --index:49;
+  --scale:2.45;
+  --pos_y:-24.5px;
+  --pos_x:-39.2px;
+  --delay:7.35s;
+}
+.wrapper_hexamania .hex:nth-child(50) {
+  --hue: 300;
+  --index:50;
+  --scale:2.5;
+  --pos_y:-25px;
+  --pos_x:-40px;
+  --delay:7.5s;
+}
+.wrapper_hexamania .hex:nth-child(51) {
+  --hue: 306;
+  --index:51;
+  --scale:2.55;
+  --pos_y:-25.5px;
+  --pos_x:-40.8px;
+  --delay:7.65s;
+}
+.wrapper_hexamania .hex:nth-child(52) {
+  --hue: 312;
+  --index:52;
+  --scale:2.6;
+  --pos_y:-26px;
+  --pos_x:-41.6px;
+  --delay:7.8s;
+}
+.wrapper_hexamania .hex:nth-child(53) {
+  --hue: 318;
+  --index:53;
+  --scale:2.65;
+  --pos_y:-26.5px;
+  --pos_x:-42.4px;
+  --delay:7.95s;
+}
+.wrapper_hexamania .hex:nth-child(54) {
+  --hue: 324;
+  --index:54;
+  --scale:2.7;
+  --pos_y:-27px;
+  --pos_x:-43.2px;
+  --delay:8.1s;
+}
+.wrapper_hexamania .hex:nth-child(55) {
+  --hue: 330;
+  --index:55;
+  --scale:2.75;
+  --pos_y:-27.5px;
+  --pos_x:-44px;
+  --delay:8.25s;
+}
+.wrapper_hexamania .hex:nth-child(56) {
+  --hue: 336;
+  --index:56;
+  --scale:2.8;
+  --pos_y:-28px;
+  --pos_x:-44.8px;
+  --delay:8.4s;
+}
+.wrapper_hexamania .hex:nth-child(57) {
+  --hue: 342;
+  --index:57;
+  --scale:2.85;
+  --pos_y:-28.5px;
+  --pos_x:-45.6px;
+  --delay:8.55s;
+}
+.wrapper_hexamania .hex:nth-child(58) {
+  --hue: 348;
+  --index:58;
+  --scale:2.9;
+  --pos_y:-29px;
+  --pos_x:-46.4px;
+  --delay:8.7s;
+}
+.wrapper_hexamania .hex:nth-child(59) {
+  --hue: 354;
+  --index:59;
+  --scale:2.95;
+  --pos_y:-29.5px;
+  --pos_x:-47.2px;
+  --delay:8.85s;
+}
+
+@-webkit-keyframes rotate_hexagon_madness {
+  0%, 100% {
+    transform: scale(var(--scale)) translateY(var(--pos_y)) translateX(calc(var(--pos_x) * 1.5)) rotateZ(360deg);
+  }
+  33% {
+    transform: scale(calc(var(--scale) * 1.6)) translateX(calc(var(--pos_x) * 2)) translateY(calc(var(--pos_y) * 2));
+  }
+}
+
+@keyframes rotate_hexagon_madness {
+  0%, 100% {
+    transform: scale(var(--scale)) translateY(var(--pos_y)) translateX(calc(var(--pos_x) * 1.5)) rotateZ(360deg);
+  }
+  33% {
+    transform: scale(calc(var(--scale) * 1.6)) translateX(calc(var(--pos_x) * 2)) translateY(calc(var(--pos_y) * 2));
+  }
+}/*# sourceMappingURL=HexagonMadness.css.map */
