@@ -27,6 +27,7 @@ export const ImageBook = () => {
           <div className="page p_1"></div>
           <div className="page p_2"></div>
         </div>
+        <h2 className="info">For now animation is only visible for displays wider than 1000px, I'll adjust it later</h2>
     </section>
   );
 };

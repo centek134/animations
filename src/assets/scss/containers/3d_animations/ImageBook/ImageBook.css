@@ -1,9 +1,10 @@
 .wrapper_book {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .wrapper_book .book {
   box-shadow: 0 0 20px 0 #000;
@@ -74,4 +75,20 @@
           backface-visibility: hidden;
   transform: rotateY(180deg);
   background-image: url("../../../../../assets/img/ImageBook/grumpy_cat.png");
+}
+.wrapper_book .info {
+  display: none;
+  color: #fff;
+  max-width: 300px;
+}
+@media screen and (max-width: 1000px) {
+  .wrapper_book {
+    background-color: #000;
+  }
+  .wrapper_book .book {
+    display: none;
+  }
+  .wrapper_book .info {
+    display: block;
+  }
 }/*# sourceMappingURL=ImageBook.css.map */
