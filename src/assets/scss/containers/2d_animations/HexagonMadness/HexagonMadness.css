@@ -22,6 +22,7 @@
   background-color: hsl(var(--hue), 80%, 80%);
   -webkit-animation: rotate_hexagon_madness 7s var(--delay) ease-in-out infinite;
           animation: rotate_hexagon_madness 7s var(--delay) ease-in-out infinite;
+  opacity: 0;
 }
 @media screen and (max-width: 850px) {
   .wrapper_hexamania .hex {
@@ -533,6 +534,7 @@
 @-webkit-keyframes rotate_hexagon_madness {
   0%, 100% {
     transform: scale(var(--scale)) translateY(var(--pos_y)) translateX(calc(var(--pos_x) * 1.5)) rotateZ(360deg);
+    opacity: 1;
   }
   33% {
     transform: scale(calc(var(--scale) * 1.6)) translateX(calc(var(--pos_x) * 2)) translateY(calc(var(--pos_y) * 2));
@@ -542,6 +544,7 @@
 @keyframes rotate_hexagon_madness {
   0%, 100% {
     transform: scale(var(--scale)) translateY(var(--pos_y)) translateX(calc(var(--pos_x) * 1.5)) rotateZ(360deg);
+    opacity: 1;
   }
   33% {
     transform: scale(calc(var(--scale) * 1.6)) translateX(calc(var(--pos_x) * 2)) translateY(calc(var(--pos_y) * 2));
