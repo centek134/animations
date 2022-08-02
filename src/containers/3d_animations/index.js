@@ -6,3 +6,4 @@ export * from "./MenuAnimated/MenuAnimated.js";
 export * from "./MovingPillars/MovingPillars.js";
 export * from "./Sphere/Sphere.js";
 export * from "./Text/Text.js";
+export * from "./Transformer/Transformer.js";
