@@ -1,0 +1,81 @@
+.wrapper_hexagons {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(142, 135, 250);
+  background: radial-gradient(
+    circle,
+    rgba(142, 135, 250, 1) 0%,
+    rgba(131, 34, 157, 1) 51%,
+    rgba(186, 71, 71, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .flex {
+    width: 60px;
+    height: 70px;
+    position: relative;
+    .hex {
+      position: absolute;
+left: 0;
+top: 0;
+animation: hexagons_move 10s ease-in-out infinite;
+    }
+
+
+    @for $i from 0 to 4 {
+        .hex:nth-of-type(#{$i + 1}){
+            //column 0 top
+            --top: #{$i * - 68px};
+        }
+        .hex:nth-of-type(#{$i + 5}){
+            //column
+            --top: #{$i * - 68px - 17.5px};
+            --left:#{30px};
+        }
+        .hex:nth-of-type(#{$i + 9}){
+            --top: #{$i * - 68px - 17.5px};
+            --left:#{-30px};
+        }
+        .hex:nth-of-type(#{$i + 13}){
+            --top: #{$i * 68px + 68px};
+        }
+        .hex:nth-of-type(#{$i + 17}){
+            --top: #{$i *  68px + 52.5px};
+            --left:#{30px};
+        }
+        .hex:nth-of-type(#{$i + 21}){
+            --top: #{$i *  68px + 52.5px};
+            --left:#{-30px};
+        }
+        .hex:nth-of-type(#{$i + 25}){
+            --top: #{$i * - 68px};
+            --left:#{60px};
+        }
+        .hex:nth-of-type(#{$i + 29}){
+            --top: #{$i * 68px + 68px};
+            --left:#{60px};
+        }
+        .hex:nth-of-type(#{$i + 33}){
+            --top: #{$i * - 68px};
+            --left:#{-60px};
+        }
+        .hex:nth-of-type(#{$i + 37}){
+            --top: #{$i * 68px + 68px};
+            --left:#{-60px};
+        }
+    }
+  }
+}
+
+@keyframes hexagons_move {
+    80%{
+        top: var(--top);
+        left: var(--left);
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
