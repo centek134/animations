@@ -18,64 +18,134 @@
     position: relative;
     .hex {
       position: absolute;
-left: 0;
-top: 0;
-animation: hexagons_move 10s ease-in-out infinite;
+      top: 0;
+      left: 0;
+      animation: hexagons_move 7s ease-in-out infinite;
+      background-color: hsl(var(--hue), 90%, 70%);
     }
 
-
     @for $i from 0 to 4 {
-        .hex:nth-of-type(#{$i + 1}){
-            //column 0 top
-            --top: #{$i * - 68px};
-        }
-        .hex:nth-of-type(#{$i + 5}){
-            //column
-            --top: #{$i * - 68px - 17.5px};
-            --left:#{30px};
-        }
-        .hex:nth-of-type(#{$i + 9}){
-            --top: #{$i * - 68px - 17.5px};
-            --left:#{-30px};
-        }
-        .hex:nth-of-type(#{$i + 13}){
-            --top: #{$i * 68px + 68px};
-        }
-        .hex:nth-of-type(#{$i + 17}){
-            --top: #{$i *  68px + 52.5px};
-            --left:#{30px};
-        }
-        .hex:nth-of-type(#{$i + 21}){
-            --top: #{$i *  68px + 52.5px};
-            --left:#{-30px};
-        }
-        .hex:nth-of-type(#{$i + 25}){
-            --top: #{$i * - 68px};
-            --left:#{60px};
-        }
-        .hex:nth-of-type(#{$i + 29}){
-            --top: #{$i * 68px + 68px};
-            --left:#{60px};
-        }
-        .hex:nth-of-type(#{$i + 33}){
-            --top: #{$i * - 68px};
-            --left:#{-60px};
-        }
-        .hex:nth-of-type(#{$i + 37}){
-            --top: #{$i * 68px + 68px};
-            --left:#{-60px};
-        }
+      .hex:nth-of-type(#{$i + 1}) {
+        --top: #{$i * -68px};
+      }
+      .hex:nth-of-type(#{$i + 5}) {
+        --top: #{$i * -68px - 17.5px};
+        --left: #{30px};
+      }
+      .hex:nth-of-type(#{$i + 9}) {
+        --top: #{$i * -68px - 17.5px};
+        --left: #{-30px};
+      }
+      .hex:nth-of-type(#{$i + 13}) {
+        --top: #{$i * 68px + 68px};
+      }
+      .hex:nth-of-type(#{$i + 17}) {
+        --top: #{$i * 68px + 52.5px};
+        --left: #{30px};
+      }
+      .hex:nth-of-type(#{$i + 21}) {
+        --top: #{$i * 68px + 52.5px};
+        --left: #{-30px};
+      }
+      .hex:nth-of-type(#{$i + 25}) {
+        --top: #{$i * -68px};
+        --left: #{60px};
+      }
+      .hex:nth-of-type(#{$i + 29}) {
+        --top: #{$i * 68px + 68px};
+        --left: #{60px};
+      }
+      .hex:nth-of-type(#{$i + 33}) {
+        --top: #{$i * -68px};
+        --left: #{-60px};
+      }
+      .hex:nth-of-type(#{$i + 37}) {
+        --top: #{$i * 68px + 68px};
+        --left: #{-60px};
+      }
+      .hex:nth-of-type(#{$i + 41}) {
+        --top: #{$i * -68px - 17.5px};
+        --left: #{90px};
+      }
+      .hex:nth-of-type(#{$i + 45}) {
+        --top: #{$i * 68px + 52.5px};
+        --left: #{90px};
+      }
+      .hex:nth-of-type(#{$i + 49}) {
+        --top: #{$i * -68px - 17.5px};
+        --left: #{-90px};
+      }
+      .hex:nth-of-type(#{$i + 53}) {
+        --top: #{$i * 68px + 52.5px};
+        --left: #{-90px};
+      }
+      .hex:nth-of-type(#{$i + 57}) {
+        --top: #{$i * -68px};
+        --left: #{120px};
+      }
+      .hex:nth-of-type(#{$i + 61}) {
+        --top: #{$i * 68px + 68px};
+        --left: #{120px};
+      }
+      .hex:nth-of-type(#{$i + 65}) {
+        --top: #{$i * -68px};
+        --left: #{-120px};
+      }
+      .hex:nth-of-type(#{$i + 69}) {
+        --top: #{$i * 68px + 68px};
+        --left: #{-120px};
+      }
+      .hex:nth-of-type(#{$i + 73}) {
+        --top: #{$i * -68px - 17.5px};
+        --left: #{150px};
+      }
+      .hex:nth-of-type(#{$i + 77}) {
+        --top: #{$i * 68px + 52.5px};
+        --left: #{150px};
+      }
+      .hex:nth-of-type(#{$i + 81}) {
+        --top: #{$i * -68px - 17.5px};
+        --left: #{-150px};
+      }
+      .hex:nth-of-type(#{$i + 85}) {
+        --top: #{$i * 68px + 52.5px};
+        --left: #{-150px};
+      }
+      .hex:nth-of-type(#{$i + 89}) {
+        --top: #{$i * -68px};
+        --left: #{180px};
+      }
+      .hex:nth-of-type(#{$i + 93}) {
+        --top: #{$i * 68px + 68px};
+        --left: #{180px};
+      }
+      .hex:nth-of-type(#{$i + 97}) {
+        --top: #{$i * -68px};
+        --left: #{-180px};
+      }
+      .hex:nth-of-type(#{$i + 101}) {
+        --top: #{$i * 68px + 68px};
+        --left: #{-180px};
+      }
     }
   }
 }
 
 @keyframes hexagons_move {
-    80%{
-        top: var(--top);
-        left: var(--left);
-    }
-    100%{
-        top: 0;
-        left: 0;
-    }
+  10% {
+    top: var(--top);
+    left: var(--left);
+  }
+  70%{
+    top: var(--top);
+    left: var(--left);
+  }
+  80% {
+    top: 0;
+    left: 0;
+  }
+  100%{
+    top: 0;
+    left: 0;
+  }
 }
