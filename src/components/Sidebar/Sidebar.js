@@ -11,7 +11,8 @@ const Sidebar = (props) => {
     {name:"Moving Pillars", url:"3d-animations/moving-pillars"}, {name:"Transformer", url:"3d-animations/transformer"}
   ];
 
-  const animations_list_2d =[{name:"Hide and seek", url:"2d-animations/hide-and-seek"}, {name:"Dots", url:"2d-animations/dots"},{name:"Hexagon madness", url:"2d-animations/hexagon-madness"}, {name:"Hexagons", url:"2d-animations/hexagons"}];
+  const animations_list_2d =[{name:"Hide and seek", url:"2d-animations/hide-and-seek"}, {name:"Dots", url:"2d-animations/dots"},{name:"Hexagon madness", url:"2d-animations/hexagon-madness"}, {name:"Hexagons", url:"2d-animations/hexagons"}
+  , {name:"Eye", url:"2d-animations/eye"}];
 
   return (
     <nav className={props.show?"side-nav open":"side-nav"}>
