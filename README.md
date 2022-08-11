@@ -1,6 +1,7 @@
 # About Project
   This is simple project where I'm doing different animations, and display them on the screen.  
   To display animation user have to choose one from sidebar, nothing crazy about that.
+  Live link to project: https://willowy-beignet-ef9740.netlify.app/
 
 
 ## Technologies
