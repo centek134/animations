@@ -8,36 +8,100 @@
 }
 .wrapper_juggler .man_container {
   position: relative;
-  width: 550px;
+  max-width: 550px;
   height: 550px;
 }
 .wrapper_juggler .man_container .left_hand {
   position: absolute;
   top: 450px;
-  left: 300px;
+  left: 340px;
   z-index: 5;
+  -webkit-animation: hand 1s 1.5s linear infinite;
+          animation: hand 1s 1.5s linear infinite;
 }
 .wrapper_juggler .man_container .right_hand {
   position: absolute;
   top: 450px;
-  left: 90px;
+  left: 50px;
   z-index: 5;
+  -webkit-animation: hand 1s linear infinite;
+          animation: hand 1s linear infinite;
 }
 .wrapper_juggler .man_container .ball {
   position: absolute;
 }
-.wrapper_juggler .man_container .ball.nr_1 {
+.wrapper_juggler .man_container .ball.green {
   top: 400px;
   left: 120px;
   z-index: 2;
+  -webkit-animation: ball_juggle 3s linear infinite;
+          animation: ball_juggle 3s linear infinite;
 }
-.wrapper_juggler .man_container .ball.nr_2 {
+.wrapper_juggler .man_container .ball.yellow {
   top: 380px;
   left: 120px;
   z-index: 3;
+  -webkit-animation: ball_juggle 3s 1s linear infinite;
+          animation: ball_juggle 3s 1s linear infinite;
 }
-.wrapper_juggler .man_container .ball.nr_3 {
+.wrapper_juggler .man_container .ball.blue {
   top: 400px;
-  left: 140px;
+  left: 100px;
   z-index: 4;
+  -webkit-animation: ball_juggle 3s 2s linear infinite;
+          animation: ball_juggle 3s 2s linear infinite;
+}
+
+@-webkit-keyframes hand {
+  0%, 100% {
+    top: 450px;
+  }
+  50% {
+    top: 430px;
+  }
+}
+
+@keyframes hand {
+  0%, 100% {
+    top: 450px;
+  }
+  50% {
+    top: 430px;
+  }
+}
+@-webkit-keyframes ball_juggle {
+  0%, 100% {
+    top: 400px;
+    left: 70px;
+  }
+  25% {
+    top: 0;
+    left: 270px;
+  }
+  50% {
+    top: 400px;
+    left: 360px;
+  }
+  75% {
+    top: 0px;
+    left: 120px;
+  }
+}
+@keyframes ball_juggle {
+  0%, 100% {
+    top: 400px;
+    left: 70px;
+  }
+  25% {
+    top: 0;
+    left: 270px;
+  }
+  50% {
+    top: 400px;
+    left: 360px;
+  }
+  75% {
+    top: 0px;
+    left: 120px;
+  }
 }/*# sourceMappingURL=Juggler.css.map */

@@ -1,44 +1,77 @@
-.wrapper_juggler{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: hidden;
-    .man_container{
-        position: relative;
-        width: 550px;
-        height: 550px;
-        .left_hand{
-            position: absolute;
-            top: 450px;
-            left: 300px;
-            z-index: 5;
-        }
-        .right_hand{
-            position: absolute;
-            top: 450px;
-            left: 90px;
-            z-index: 5;
-        }
-        .ball{
-            position: absolute;
-        
-        }
-        .ball.nr_1{
-            top: 400px;
-            left: 120px;
-            z-index: 2;
-        }
-        .ball.nr_2{
-            top: 380px;
-            left: 120px;
-            z-index: 3;
-        }
-        .ball.nr_3{
-            top: 400px;
-            left: 140px;
-            z-index: 4;
-        }
+.wrapper_juggler {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  .man_container {
+    position: relative;
+    max-width: 550px;
+    height: 550px;
+    .left_hand {
+      position: absolute;
+      top: 450px;
+      left: 340px;
+      z-index: 5;
+      animation: hand 1s 1.5s linear infinite;
     }
+    .right_hand {
+      position: absolute;
+      top: 450px;
+      left: 50px;
+      z-index: 5;
+      animation: hand 1s  linear infinite;
+    }
+    .ball {
+      position: absolute;
+    }
+    .ball.green {
+      top: 400px;
+      left: 120px;
+      z-index: 2;
+      animation: ball_juggle 3s linear infinite;
+    }
+    .ball.yellow {
+      top: 380px;
+      left: 120px;
+      z-index: 3;
+      animation: ball_juggle 3s 1s linear infinite;
+    }
+    .ball.blue {
+      top: 400px;
+      left: 100px;
+      z-index: 4;
+      animation: ball_juggle 3s 2s linear infinite;
+    }
+  }
+}
+
+@keyframes hand{
+  0%,100%{
+    top: 450px;
+  }
+  50%{
+    top: 430px;
+  }
+}
+
+@keyframes ball_juggle {
+  0%,
+  100% {
+    top: 400px;
+    left: 70px;
+  }
+  25% {
+    top: 0;
+    left: 270px;
+  }
+  50% {
+    top: 400px;
+    left: 360px;
+  }
+  75% {
+    top: 0px;
+    left: 120px;
+  }
 }
