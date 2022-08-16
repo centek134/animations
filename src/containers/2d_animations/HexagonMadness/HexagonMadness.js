@@ -3,7 +3,7 @@ import "../../../assets/scss/containers/2d_animations/HexagonMadness/HexagonMadn
 
 export const HexagonMadness = () => {
   return (
-    <section class="wrapper_hexamania">
+    <section className="wrapper_hexamania">
             <div className="hex"></div>
             <div className="hex"></div>
             <div className="hex"></div>
