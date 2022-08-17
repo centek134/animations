@@ -7,8 +7,11 @@
   overflow: hidden;
   .man_container {
     position: relative;
-    max-width: 550px;
+    width: 550px;
     height: 550px;
+    @media screen and (max-width:800px) {
+      display: none;
+    }
     .left_hand {
       position: absolute;
       top: 450px;
@@ -44,6 +47,80 @@
       z-index: 4;
       animation: ball_juggle 3s 2s linear infinite;
     }
+  }
+
+  .man_container_mobile{
+    display: none;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    @media screen and (max-width:800px) {
+      display: block;
+    }
+  }
+  .left_hand_mobile {
+    position: absolute;
+    top: 250px;
+    left: 190px;
+    z-index: 5;
+    animation: hand_mobile 1s 1.5s  linear infinite;
+  }
+  .right_hand_mobile {
+    position: absolute;
+    top: 250px;
+    left: 40px;
+    z-index: 5;
+    animation: hand_mobile 1s  linear infinite;
+  }
+  .ball {
+    position: absolute;
+  }
+  .ball.green_mobile {
+    top: 220px;
+    left: 40px;
+    z-index: 2;
+    animation: ball_juggle_mobile 3s linear infinite;
+  }
+  .ball.yellow_mobile {
+    top: 220px;
+    left: 60px;
+    z-index: 3;
+    animation: ball_juggle_mobile 3s 1s linear infinite;
+  }
+  .ball.blue_mobile {
+    top: 210px;
+    left: 50px;
+    z-index: 4;
+    animation: ball_juggle_mobile 3s 2s linear infinite;
+  }
+}
+
+@keyframes hand_mobile {
+  0%,100%{
+    top: 250px;
+  }
+  50%{
+    top: 230px;
+  }
+}
+
+@keyframes ball_juggle_mobile {
+  0%,
+  100% {
+    top: 220px;
+    left: 50px;
+  }
+  25% {
+    top: 0;
+    left: 160px;
+  }
+  50% {
+    top: 220px;
+    left: 190px;
+  }
+  75% {
+    top: 0px;
+    left: 70px;
   }
 }
 
