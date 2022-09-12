@@ -8,7 +8,7 @@ import {MenuAnimated, Cube, Circles, ImageBook, Sphere, Text, CurvedText, Moving
 //=============== 2D animations imports ================
 import {HideAndSeek, Dots, HexagonMadness, Hexagons, Eye} from "./containers/2d_animations/index.js";
 //=============== SVG animations imports ================
-import {Juggler, Triangle} from "./containers/Svg_animations/index.js";
+import {Juggler, Triangle, Planets} from "./containers/Svg_animations/index.js";
 
 const App = () => {
 const [showSidebar, setShowSidebar] = useState(false);
@@ -22,7 +22,7 @@ const animations_route_2d = [{path:"/2d-animations/hide-and-seek", element:<Hide
 ,{path:"/2d-animations/eye", element:<Eye/>}
 ];
 
-const animations_route_svg = [{path:"/svg-animations/juggler", element:<Juggler/>}, {path:"/svg-animations/triangle", element:<Triangle/>}
+const animations_route_svg = [{path:"/svg-animations/juggler", element:<Juggler/>}, {path:"/svg-animations/triangle", element:<Triangle/>},{path:"/2d-animations/planets", element:<Planets/>}
 ];
 
   return (
