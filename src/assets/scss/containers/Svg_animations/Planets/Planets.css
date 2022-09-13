@@ -4,7 +4,110 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at bottom, navy 0, black 100%);
-  height: 100vh;
+  background: radial-gradient(circle at bottom, #000080 0, #000 100%);
   overflow: hidden;
+}
+.wrapper_planets .planets {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.wrapper_planets .planets .planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 50%;
+  width: var(--width);
+  height: var(--height);
+  z-index: var(--index);
+}
+.wrapper_planets .planets .planet:nth-child(1) {
+  --width: 80px;
+  --height: 80px;
+  --timer: 4s;
+  --index: 9;
+}
+.wrapper_planets .planets .planet:nth-child(2) {
+  --width: 160px;
+  --height: 160px;
+  --timer: 5s;
+  --index: 8;
+}
+.wrapper_planets .planets .planet:nth-child(3) {
+  --width: 240px;
+  --height: 240px;
+  --timer: 6s;
+  --index: 7;
+}
+.wrapper_planets .planets .planet:nth-child(4) {
+  --width: 320px;
+  --height: 320px;
+  --timer: 7s;
+  --index: 6;
+}
+.wrapper_planets .planets .planet:nth-child(5) {
+  --width: 400px;
+  --height: 400px;
+  --timer: 8s;
+  --index: 5;
+}
+.wrapper_planets .planets .planet:nth-child(6) {
+  --width: 480px;
+  --height: 480px;
+  --timer: 9s;
+  --index: 4;
+}
+.wrapper_planets .planets .planet:nth-child(7) {
+  --width: 560px;
+  --height: 560px;
+  --timer: 10s;
+  --index: 3;
+}
+.wrapper_planets .planets .planet:nth-child(8) {
+  --width: 640px;
+  --height: 640px;
+  --timer: 11s;
+  --index: 2;
+}
+.wrapper_planets .planets .planet:nth-child(9) {
+  --width: 720px;
+  --height: 720px;
+  --timer: 12s;
+  --index: 1;
+}
+.wrapper_planets .planets .planet .mercury {
+  width: 30px;
+  height: 30px;
+}
+.wrapper_planets .planets .planet .venus {
+  width: 30px;
+  height: 30px;
+}
+.wrapper_planets .planets .planet .earth {
+  width: 30px;
+  height: 30px;
+}
+.wrapper_planets .planets .planet .mars {
+  width: 30px;
+  height: 30px;
+}
+.wrapper_planets .planets .planet .jupiter {
+  width: 30px;
+  height: 30px;
+}
+.wrapper_planets .planets .planet .saturn {
+  width: 30px;
+  height: 30px;
+}
+.wrapper_planets .planets .planet .uranus {
+  width: 30px;
+  height: 30px;
+}
+.wrapper_planets .planets .planet .neptune {
+  width: 30px;
+  height: 30px;
 }/*# sourceMappingURL=Planets.css.map */

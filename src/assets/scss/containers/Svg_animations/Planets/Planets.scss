@@ -4,7 +4,75 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at bottom, navy 0, black 100%);
-    height: 100vh;
+    background: radial-gradient(circle at bottom, #000080 0, #000 100%);
     overflow: hidden;
+    .planets{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .planet{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            border-radius: 50%;
+            width: var(--width);
+            height: var(--height);
+            z-index: var(--index);
+            @for $i from 1 to 10 {
+                &:nth-child(#{$i}){
+                    --width: #{calc($i * 80px)};
+                    --height: #{calc($i * 80px)};
+                    --timer: #{$i + 3s};
+                    --index: #{10 - $i};
+                }
+            }
+            .mercury{
+                width: 30px;
+                height: 30px;
+            }
+            .venus{
+                width: 30px;
+                height: 30px;
+            }
+            .earth{
+                width: 30px;
+                height: 30px;
+            }
+            .mars{
+                width: 30px;
+                height: 30px;
+            }
+            .jupiter{
+                width: 30px;
+                height: 30px;
+            }
+            .saturn{
+                width: 30px;
+                height: 30px;
+            }
+            .uranus{
+                width: 30px;
+                height: 30px;
+            }
+            .neptune{
+                width: 30px;
+                height: 30px;
+            }
+
+        }
+    }
 }
+// @keyframes rotate_plan {
+//     100%{
+//         transform: rotateZ(360deg);
+//     }
+// }
+// @keyframes rotate_planets{
+//     100%{
+//         transform: rotateZ(360deg);
+//     }
+// }
