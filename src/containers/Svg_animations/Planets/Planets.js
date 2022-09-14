@@ -15,32 +15,32 @@ export const Planets = () => {
   return (
     <div className="wrapper_planets">
         <div className="planets">
-          <div className="planet item">
+          <div className="planet">
             <Sun className="sun"/>
           </div>
-          <div className="planet item">
-            <Mercury className="mercury"/>
+          <div className="planet">
+            <Mercury className="item"/>
           </div>
-          <div className="planet item">
-            <Venus className="venus"/>
+          <div className="planet">
+            <Venus className="item"/>
           </div>
-          <div className="planet item">
-            <Earth className="earth" />
+          <div className="planet">
+            <Earth className="item" />
           </div>
-          <div className="planet item">
-            <Mars className="mars" />
+          <div className="planet">
+            <Mars className="item" />
           </div>
-          <div className="planet item">
-            <Jupiter className="jupiter" />
+          <div className="planet">
+            <Jupiter className="item" />
           </div>
-          <div className="planet item">
-            <Saturn className="saturn" />
+          <div className="planet">
+            <Saturn className="item" />
           </div>
-          <div className="planet item">
-            <Uranus className="uranus" />
+          <div className="planet">
+            <Uranus className="item" />
           </div>
-          <div className="planet item">
-            <Neptune className="neptune" />
+          <div className="planet">
+            <Neptune className="item" />
           </div>
         </div>
     </div>
