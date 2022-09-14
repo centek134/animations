@@ -52,7 +52,7 @@
   }
 }
 .side-nav .sidebar_list .home_page_link {
-  width: 100%;
+  margin: 0 auto;
   font-size: 30px;
   text-decoration: none;
   color: #ffffff;
