@@ -17,97 +17,147 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transform-origin: center;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  border-radius: 50%;
   width: var(--width);
   height: var(--height);
   z-index: var(--index);
+  -webkit-animation: rotate_planet var(--timer) linear infinite;
+          animation: rotate_planet var(--timer) linear infinite;
 }
 .wrapper_planets .planets .planet:nth-child(1) {
-  --width: 80px;
-  --height: 80px;
-  --timer: 4s;
+  --width: 90px;
+  --height: 90px;
+  --timer: 3s;
   --index: 9;
 }
 .wrapper_planets .planets .planet:nth-child(2) {
-  --width: 160px;
-  --height: 160px;
-  --timer: 5s;
+  --width: 180px;
+  --height: 180px;
+  --timer: 4s;
   --index: 8;
 }
 .wrapper_planets .planets .planet:nth-child(3) {
-  --width: 240px;
-  --height: 240px;
-  --timer: 6s;
+  --width: 270px;
+  --height: 270px;
+  --timer: 5s;
   --index: 7;
 }
 .wrapper_planets .planets .planet:nth-child(4) {
-  --width: 320px;
-  --height: 320px;
-  --timer: 7s;
+  --width: 360px;
+  --height: 360px;
+  --timer: 6s;
   --index: 6;
 }
 .wrapper_planets .planets .planet:nth-child(5) {
-  --width: 400px;
-  --height: 400px;
-  --timer: 8s;
+  --width: 450px;
+  --height: 450px;
+  --timer: 7s;
   --index: 5;
 }
 .wrapper_planets .planets .planet:nth-child(6) {
-  --width: 480px;
-  --height: 480px;
-  --timer: 9s;
+  --width: 540px;
+  --height: 540px;
+  --timer: 8s;
   --index: 4;
 }
 .wrapper_planets .planets .planet:nth-child(7) {
-  --width: 560px;
-  --height: 560px;
-  --timer: 10s;
+  --width: 630px;
+  --height: 630px;
+  --timer: 9s;
   --index: 3;
 }
 .wrapper_planets .planets .planet:nth-child(8) {
-  --width: 640px;
-  --height: 640px;
-  --timer: 11s;
+  --width: 720px;
+  --height: 720px;
+  --timer: 10s;
   --index: 2;
 }
 .wrapper_planets .planets .planet:nth-child(9) {
-  --width: 720px;
-  --height: 720px;
-  --timer: 12s;
+  --width: 810px;
+  --height: 810px;
+  --timer: 11s;
   --index: 1;
 }
-.wrapper_planets .planets .planet .mercury {
-  width: 30px;
-  height: 30px;
+.wrapper_planets .planets .planet .sun {
+  width: 100%;
+  height: 100%;
 }
-.wrapper_planets .planets .planet .venus {
-  width: 30px;
-  height: 30px;
+.wrapper_planets .planets .planet .item {
+  width: 40px;
+  height: 40px;
 }
-.wrapper_planets .planets .planet .earth {
-  width: 30px;
-  height: 30px;
+@media screen and (max-width: 600px) {
+  .wrapper_planets .planets .planet:nth-child(1) {
+    --width: 60px;
+    --height: 60px;
+    --timer: 3s;
+    --index: 9;
+  }
+  .wrapper_planets .planets .planet:nth-child(2) {
+    --width: 120px;
+    --height: 120px;
+    --timer: 4s;
+    --index: 8;
+  }
+  .wrapper_planets .planets .planet:nth-child(3) {
+    --width: 180px;
+    --height: 180px;
+    --timer: 5s;
+    --index: 7;
+  }
+  .wrapper_planets .planets .planet:nth-child(4) {
+    --width: 240px;
+    --height: 240px;
+    --timer: 6s;
+    --index: 6;
+  }
+  .wrapper_planets .planets .planet:nth-child(5) {
+    --width: 300px;
+    --height: 300px;
+    --timer: 7s;
+    --index: 5;
+  }
+  .wrapper_planets .planets .planet:nth-child(6) {
+    --width: 360px;
+    --height: 360px;
+    --timer: 8s;
+    --index: 4;
+  }
+  .wrapper_planets .planets .planet:nth-child(7) {
+    --width: 420px;
+    --height: 420px;
+    --timer: 9s;
+    --index: 3;
+  }
+  .wrapper_planets .planets .planet:nth-child(8) {
+    --width: 480px;
+    --height: 480px;
+    --timer: 10s;
+    --index: 2;
+  }
+  .wrapper_planets .planets .planet:nth-child(9) {
+    --width: 540px;
+    --height: 540px;
+    --timer: 11s;
+    --index: 1;
+  }
+  .wrapper_planets .planets .planet .item {
+    width: 25px;
+    height: 25px;
+  }
 }
-.wrapper_planets .planets .planet .mars {
-  width: 30px;
-  height: 30px;
+
+@-webkit-keyframes rotate_planet {
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
 }
-.wrapper_planets .planets .planet .jupiter {
-  width: 30px;
-  height: 30px;
-}
-.wrapper_planets .planets .planet .saturn {
-  width: 30px;
-  height: 30px;
-}
-.wrapper_planets .planets .planet .uranus {
-  width: 30px;
-  height: 30px;
-}
-.wrapper_planets .planets .planet .neptune {
-  width: 30px;
-  height: 30px;
+
+@keyframes rotate_planet {
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
 }/*# sourceMappingURL=Planets.css.map */
