@@ -7,13 +7,21 @@ export const RotatingPlanets = () => {
         <div className="rotating_planets">
             <div className="sun"></div>
             <div className="elipse">
-                <div className="first planet"></div>
+                <div className="planet_wrapper">
+                    <div className="first planet"></div>
+                </div>
             </div>
             <div className="elipse">
-                <div className="second planet"></div>
+                <div className="planet_wrapper">
+                    <div className="second planet"></div>
+                </div>
             </div>
             <div className="elipse">
-                <div className="third planet"></div>
+                <div className="planet_wrapper">
+                    <div className="left"></div>
+                    <div className="right"></div>
+                    <div className="circle"></div>
+                </div>
             </div>
         </div>
     </div>
