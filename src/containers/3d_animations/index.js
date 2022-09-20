@@ -7,3 +7,4 @@ export * from "./MovingPillars/MovingPillars.js";
 export * from "./Sphere/Sphere.js";
 export * from "./Text/Text.js";
 export * from "./Transformer/Transformer.js";
+export * from "./RotatingPlanets/RotatingPlanets.js";
