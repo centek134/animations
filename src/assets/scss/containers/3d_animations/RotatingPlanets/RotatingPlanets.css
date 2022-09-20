@@ -12,7 +12,6 @@
   height: 900px;
   transform-style: preserve-3d;
   transform: rotateX(80deg);
-  border-radius: 50%;
 }
 .wrapper_rotating_planets .rotating_planets .sun {
   position: absolute;
@@ -23,7 +22,7 @@
   height: 250px;
   border-radius: 50%;
   background-color: #ecec6a;
-  box-shadow: 0px 0px 70px 15px yellow;
+  box-shadow: 0px 0px 70px 0px yellow;
   -webkit-animation: shining_sun 5s ease-in-out infinite;
           animation: shining_sun 5s ease-in-out infinite;
 }
@@ -95,6 +94,32 @@
           animation: first_planet_circle 7.5s linear infinite;
   transform: rotateY(90deg);
 }
+.wrapper_rotating_planets .rotating_planets .elipse .planet_wrapper.second {
+  width: 100px;
+  height: 100px;
+  background-color: #00aa63;
+  margin: calc(100% - 100px) auto;
+  -webkit-animation: second_planet_size 7.5s linear infinite;
+          animation: second_planet_size 7.5s linear infinite;
+}
+.wrapper_rotating_planets .rotating_planets .elipse .planet_wrapper.second .right {
+  background-color: #00aa63;
+  -webkit-animation: second_planet_right 7.5s linear infinite;
+          animation: second_planet_right 7.5s linear infinite;
+  z-index: 25;
+}
+.wrapper_rotating_planets .rotating_planets .elipse .planet_wrapper.second .left {
+  background-color: #008a50;
+  -webkit-animation: second_planet_left 7.5s linear infinite;
+          animation: second_planet_left 7.5s linear infinite;
+  z-index: 26;
+}
+.wrapper_rotating_planets .rotating_planets .elipse .planet_wrapper.second .circle {
+  background-color: #008a50;
+  -webkit-animation: second_planet_circle 7.5s linear infinite;
+          animation: second_planet_circle 7.5s linear infinite;
+  z-index: 27;
+}
 .wrapper_rotating_planets .rotating_planets .elipse .planet_wrapper.third {
   background-color: #05b0ff;
   margin: 0 auto;
@@ -127,10 +152,6 @@
     width: 100px;
     height: 100px;
   }
-  50% {
-    width: 100px;
-    height: 100px;
-  }
   75% {
     width: 120px;
     height: 120px;
@@ -142,10 +163,6 @@
 
 @keyframes first_planet_size {
   25% {
-    width: 100px;
-    height: 100px;
-  }
-  50% {
     width: 100px;
     height: 100px;
   }
@@ -293,6 +310,132 @@
     background-color: #800080;
   }
 }
+@-webkit-keyframes second_planet_size {
+  50% {
+    width: 80px;
+    height: 80px;
+  }
+  100% {
+    transform: rotateX(90deg) rotateY(-360deg);
+    width: 100px;
+    height: 100px;
+  }
+}
+@keyframes second_planet_size {
+  50% {
+    width: 80px;
+    height: 80px;
+  }
+  100% {
+    transform: rotateX(90deg) rotateY(-360deg);
+    width: 100px;
+    height: 100px;
+  }
+}
+@-webkit-keyframes second_planet_right {
+  49.9% {
+    background-color: #00aa63;
+  }
+  50% {
+    background-color: #008a50;
+  }
+  100% {
+    background-color: #008a50;
+  }
+}
+@keyframes second_planet_right {
+  49.9% {
+    background-color: #00aa63;
+  }
+  50% {
+    background-color: #008a50;
+  }
+  100% {
+    background-color: #008a50;
+  }
+}
+@-webkit-keyframes second_planet_left {
+  49.9% {
+    background-color: #008a50;
+  }
+  50% {
+    background-color: #00aa63;
+  }
+  100% {
+    background-color: #00aa63;
+  }
+}
+@keyframes second_planet_left {
+  49.9% {
+    background-color: #008a50;
+  }
+  50% {
+    background-color: #00aa63;
+  }
+  100% {
+    background-color: #00aa63;
+  }
+}
+@-webkit-keyframes second_planet_circle {
+  24.9% {
+    transform: rotateY(90deg);
+    background-color: #008a50;
+  }
+  25% {
+    transform: rotateY(90deg);
+    background-color: #00aa63;
+  }
+  49.9% {
+    transform: rotateY(180deg);
+    background-color: #00aa63;
+  }
+  50% {
+    transform: rotateY(0deg);
+    background-color: #00aa63;
+  }
+  74.9% {
+    transform: rotateY(90deg);
+    background-color: #00aa63;
+  }
+  75% {
+    transform: rotateY(90deg);
+    background-color: #008a50;
+  }
+  100% {
+    transform: rotateY(180deg);
+    background-color: #008a50;
+  }
+}
+@keyframes second_planet_circle {
+  24.9% {
+    transform: rotateY(90deg);
+    background-color: #008a50;
+  }
+  25% {
+    transform: rotateY(90deg);
+    background-color: #00aa63;
+  }
+  49.9% {
+    transform: rotateY(180deg);
+    background-color: #00aa63;
+  }
+  50% {
+    transform: rotateY(0deg);
+    background-color: #00aa63;
+  }
+  74.9% {
+    transform: rotateY(90deg);
+    background-color: #00aa63;
+  }
+  75% {
+    transform: rotateY(90deg);
+    background-color: #008a50;
+  }
+  100% {
+    transform: rotateY(180deg);
+    background-color: #008a50;
+  }
+}
 @-webkit-keyframes third_planet_size {
   50% {
     width: 95px;
@@ -327,18 +470,18 @@
 }
 @-webkit-keyframes shining_sun {
   50% {
-    box-shadow: 0px 0px 70px 5px yellow;
+    box-shadow: 0px 0px 70px 25px yellow;
   }
   100% {
-    box-shadow: 0px 0px 70px 15px yellow;
+    box-shadow: 0px 0px 70px 0px yellow;
   }
 }
 @keyframes shining_sun {
   50% {
-    box-shadow: 0px 0px 70px 5px yellow;
+    box-shadow: 0px 0px 70px 25px yellow;
   }
   100% {
-    box-shadow: 0px 0px 70px 15px yellow;
+    box-shadow: 0px 0px 70px 0px yellow;
   }
 }
 @-webkit-keyframes third_planet_right {
@@ -459,5 +602,21 @@
   99.9% {
     background-color: #05b0ff;
     transform: rotateY(180deg);
+  }
+}
+@media screen and (max-width: 1150px) {
+  .wrapper_rotating_planets .rotating_planets {
+    width: 600px;
+    height: 600px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .wrapper_rotating_planets .rotating_planets {
+    width: 450px;
+    height: 450px;
+  }
+  .wrapper_rotating_planets .rotating_planets .sun {
+    width: 200px;
+    height: 200px;
   }
 }/*# sourceMappingURL=RotatingPlanets.css.map */
