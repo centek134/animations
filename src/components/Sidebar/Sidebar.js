@@ -14,7 +14,7 @@ const Sidebar = (props) => {
   const animations_list_2d =[{name:"Hide and seek", url:"2d-animations/hide-and-seek"}, {name:"Dots", url:"2d-animations/dots"},{name:"Hexagon madness", url:"2d-animations/hexagon-madness"}, {name:"Hexagons", url:"2d-animations/hexagons"}
   , {name:"Eye", url:"2d-animations/eye"}];
 
-  const animations_list_svg =[{name:"Juggler", url:"svg-animations/juggler"},{name:"Triangle", url:"svg-animations/triangle"},{name:"Planets", url:"2d-animations/planets"}];
+  const animations_list_svg =[{name:"Juggler", url:"svg-animations/juggler"},{name:"Triangle", url:"svg-animations/triangle"},{name:"Planets", url:"svg-animations/planets"},{name:"Earth", url:"svg-animations/earth"}];
 
   return (
     <nav className={props.show?"side-nav open":"side-nav"}>
