@@ -1,12 +1,12 @@
 import React from "react";
 import "../../../assets/scss/containers/Svg_animations/Earth/Earth.css";
-import {ReactComponent as World} from "../../../assets/svg/Earth/World.svg";
+import {ReactComponent as WorldPc} from "../../../assets/svg/Earth/World_pc.svg";
 
 export const Earth = () => {
   return (
     <div className="wrapper_earth">
         <div className="earth_container">
-            <World/>
+            <WorldPc className="earth"/>
         </div>
     </div>
   );
